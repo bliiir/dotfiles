@@ -1,10 +1,11 @@
-# Jan's dotfiles
+# bliiir's dotfiles, copied from [Jan's dotfiles](https://github.com/jancr/dotfiles)
 
 
 ## Dependencies:
 In theory all you should need to install is yadm, then the bin/dotfiles.sh should take care of the rest.
 
 ### 1. Install yadm - Yet Another Dotfiles Manager 
+
 #### Ubuntu / Debian
 ```
 sudo apt-get install -y software-properties-common
