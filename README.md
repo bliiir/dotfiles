@@ -18,6 +18,6 @@ Clone dotfiles
 `yadm clone --hard https://github.com/bliiir/dotfiles.git`
 
 Run bash script
-`bash ~/bin/dotfiles.sh`
+`bash ~/.local/bin/dotfiles.sh`
 
 
