@@ -1,26 +1,23 @@
-# bliiir's dotfiles
+# bliiir's dotfiles for mac
 Forked from [Jan's dotfiles](https://github.com/jancr/dotfiles)
 
+## Installs
 
-## Dependencies:
+### xcode
+`sudo xcode-select --install`
 
-### 1. Install yadm - Yet Another Dotfiles Manager 
+### Homebrew
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-#### OSX
+
+### Yadm
 `brew install yadm`
 
-#### Ubuntu / Debian
-```
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:flexiondotorg/yadm
-sudo apt-get update
-sudo apt-get -y install yadm
-```
+### dotfiles
+Clone dotfiles 
+`yadm clone --hard https://github.com/bliiir/dotfiles.git`
 
-### 2. Install the rest
-```
-yadm clone --hard https://github.com/jancr/dotfiles
-bash ~/bin/dotfiles.sh
-```
+Run bash script
+`bash ~/bin/dotfiles.sh`
 
 
