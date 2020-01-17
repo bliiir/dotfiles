@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #install OSX dependencies
-brew install git curl iterm2 tmux node cmake 
+brew install git curl tmux node cmake 
 
 # iperl dependencies
 brew install zeromq libmagic
