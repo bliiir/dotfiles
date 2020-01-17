@@ -2,6 +2,7 @@
 
 #install OSX dependencies
 brew install git curl tmux node cmake 
+brew cask install iterm2
 
 # iperl dependencies
 brew install zeromq libmagic
