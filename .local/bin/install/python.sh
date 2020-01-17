@@ -12,7 +12,7 @@ pip3 install numpy matplotlib scipy pandas seaborn sklearn
 ########################################
 # other
 ########################################
-pip3 install pytest thefuck
+pip3 install pytest thefuck pyenv
 
 ########################################
 # powerline (tmux and zsh dependency)
