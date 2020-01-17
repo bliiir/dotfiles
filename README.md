@@ -1,6 +1,8 @@
 # bliiir's dotfiles for mac
 Forked from [Jan's dotfiles](https://github.com/jancr/dotfiles)
 
+Also check out http://sourabhbajaj.com/mac-setup/ for excellent guidance in setting up your mac as a developer
+
 ## Installs
 
 ### xcode
