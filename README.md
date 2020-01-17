@@ -1,4 +1,5 @@
-# bliiir's dotfiles, copied from [Jan's dotfiles](https://github.com/jancr/dotfiles)
+# bliiir's dotfiles
+Forked from [Jan's dotfiles](https://github.com/jancr/dotfiles)
 
 
 ## Dependencies:
