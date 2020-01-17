@@ -1,8 +1,12 @@
+source ~/.alias ~/.secret
+
+#------------------------------------------------------------------------------- 
  
-# Jan Christians Refsgaards .zshrc, originally inspired by Helen Cooks awesome zsh
+# Stolen from Jan Christians Refsgaards dotfiles
 
 OS=`uname -s`
 export TERM=xterm-256color
+
 ################################################################################
 # antibody // oh-my-zsh // antigen // zgen
 ################################################################################
@@ -28,8 +32,6 @@ antigen bundle autojump
 antigen bundle compleat
 antigen bundle npm
 antigen bundle z
-
-# new copied from Christian Ravn
 antigen bundle git
 antigen bundle pyenv
 antigen bundle pip
@@ -79,7 +81,7 @@ fi
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PATH="$PYENV_ROOT//bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # source sub configs
 [ -f $HOME/.local/qfc/bin/qfc.sh ] && source $HOME/.local/qfc/bin/qfc.sh

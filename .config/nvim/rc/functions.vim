@@ -43,7 +43,8 @@ endfunction
 call NumberLineEnable()
 autocmd FocusLost,InsertEnter * silent! call NumberLineDisable()
 autocmd FocusGained,InsertLeave * silent! if mode() != 'c' | call NumberLineEnable() | endif
-autocmd TermOpen * silent! call NumberLineDisable()
+ 
+"autocmd TermOpen * silent! call NumberLineDisable()
 
 " ===== Awesome line number magic END =====
 "

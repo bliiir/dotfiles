@@ -1,3 +1,8 @@
+" show the name of the file at the top of the terminal window
+set title 
+
+" Show the path and filename at the bottom of the buffer
+set statusline+=%F
 
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
@@ -38,20 +43,21 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
 
     " Color:
-    Plug 'dracula/vim'
+    Plug 'dracula/vim', { 'as': 'dracula' }
 
     " Markdown:
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
 
     " Python:
-    " Plug 'https://github.com/tweekmonster/impsort.vim'
+    Plug 'https://github.com/tweekmonster/impsort.vim'
 
     " Latex:
     Plug 'lervag/vimtex'
 
 	" jupyter integration
-	" Plug 'jupyter-vim/jupyter-vim'
+	Plug 'jupyter-vim/jupyter-vim'
+
 call plug#end()
 
 let  mapleader = ','
@@ -60,7 +66,7 @@ filetype plugin indent on    " required
 " ============================================================
 " Syntaxtic recomended settings, change when smarter :D
 " ============================================================
-"set statusline+=%#warningmsg#
+set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 

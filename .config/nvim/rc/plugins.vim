@@ -23,22 +23,24 @@ let g:NERDCommentEmptyLines = 1
 " :map ]r :lnext<CR>
 " :map [r :lprevious<CR>
 
-:py3 << EOF
-class Syntastic:
-	@classmethod
-	def get_count(cls):
-		count = int(vim.eval('v:count'))
-		if count == 0:
-			count = ""
-		return str(count)
-
-	@classmethod
-	def move(cls, command):
-		count = cls.get_count()
-		cmd = ":{}{}".format(count, command)
-		print(cmd)
-		vim.command(cmd)
-EOF
+":wq
+":py3 << EOF
+"class Syntastic:
+"	@classmethod
+"	def get_count(cls):
+"		count = int(vim.eval('v:count'))
+"		if count == 0:
+"			count = ""
+"		return str(count)
+"
+"	@classmethod
+"	def move(cls, command):
+"		count = cls.get_count()
+"		cmd = ":{}{}".format(count, command)
+"		print(cmd)
+":w
+"vim.command(cmd)
+"EOF
 
 :noremap ]r :py3 Syntastic.move("lnext")<CR>
 :noremap [r :py3 Syntastic.move("lprevious")<CR>
