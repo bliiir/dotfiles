@@ -1,7 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
-	name = jcr
-	email = jcr@intomics.com
+	name = rgr
+	email = rgr@intomics.com
+	
 [core]
 	excludesfile = /Users/jcr/.config/.gitignore_global
 	eol = native
