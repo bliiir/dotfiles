@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #install OSX dependencies
-brew install git curl tmux node cmake autojump 
+brew install git curl tmux node cmake brew ack tree
 brew cask install iterm2
 
 # iperl dependencies
