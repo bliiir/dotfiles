@@ -29,23 +29,23 @@ These are the plugins I have installed:
 supertab
 
 ### Plugins for vim
-| Plugin | Description | vim-plug | | 
-| :-- | :-- | :-- |
-| [supertab][1]] | Tab completion | `Plug 'ervandew/supertab'`  |
+| Plugin | Description | vim-plug command | 
+| :-- | :-- | :-- | 
+| [supertab][1]] | Tab completion | `Plug 'ervandew/supertab'`  | 
 | [vim-fugitive][2] | Git wrapper for Vim  | `Plug 'tpope/vim-fugitive'` |
 | [vim-airline-themes][3] |   | `Plug 'vim-airline/vim-airline-themes'` |
-| [vim-surround] |   |
-| [syntastic] |   |
-| [impsort.vim] |   |
-| [nerdtree] |   |
-| [jupyter-vim] |   |
-| [vim-sensible] |   |
-| [dracula] |   |
-| [tabular] |   |
-| [nerdcommenter] |   |
-| [vim-airline] |   |
-| [vimtex] |   |
-| [vim-markdown] |   |
+| [vim-surround] | | |
+| [syntastic] | | |
+| [impsort.vim] | | |
+| [nerdtree] | | |
+| [jupyter-vim] | | |
+| [vim-sensible] | | |
+| [dracula] | | |
+| [tabular] | | |
+| [nerdcommenter] | | |
+| [vim-airline] | | |
+| [vimtex] | | |
+| [vim-markdown] | | |
 | [ultisnips] | | | 
 
 
