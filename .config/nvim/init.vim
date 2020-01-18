@@ -2,7 +2,9 @@
 set title 
 
 " Show the path and filename at the bottom of the buffer
-set statusline+=%F
+"set statusline+=%F
+
+"------------------------------------------------------------------------------
 
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
@@ -31,14 +33,14 @@ call plug#begin()
 
     " Tab Completion:
 	Plug 'ervandew/supertab'
-	Plug 'Valloric/YouCompleteMe'
-	Plug 'SirVer/ultisnips'
+	"Plug 'Valloric/YouCompleteMe'
+	"Plug 'sirver/ultisnips'
 	Plug 'honza/vim-snippets'
 	" Plug 'prabirshrestha/async.vim'
 	" Plug 'prabirshrestha/vim-lsp'
 	" Plug 'thomasfaingnaert/vim-lsp-snippets'
 	" Plug 'thomasfaingnaert/vim-lsp-ultisnips'
-
+	
     " Git:
     Plug 'tpope/vim-fugitive'
 
@@ -85,9 +87,13 @@ noremap  [e :lprevious<CR>
 "  - both YouCompleteMe and UltiSnips use the tab key
 "    make them play nice togeter
 " ============================================================
-" let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/plugged/vim-snippets/Ultisnips', $HOME.'/.config/nvim/plugged/vim-snippets/']
+"let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/plugged/vim-snippets/Ultisnips', $HOME.'/.config/nvim/plugged/vim-snippets/']
+
 " makes ctrl + j complete snippets
 " let g:UltiSnipsExpandTrigger="<c-j>"
+
+"let g:UltiSnipsUsePythonVersion = 3
+
 
 " from: https://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
 " make YCM compatible with UltiSnips (using supertab)
@@ -173,7 +179,7 @@ set wrapmargin=0
 " ============================================================"
 colorscheme dracula
 let g:airline_theme='badwolf'
-set colorcolumn=100
+set colorcolumn=80,100
 "set tw=100  " width of document (used by gd), default was 79
 highlight ColorColumn ctermbg=233
 
