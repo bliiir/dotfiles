@@ -29,26 +29,45 @@ These are the plugins I have installed:
 supertab
 
 ### Plugins for vim
-| Plugin | Description | Status |
+| Plugin | Description | vim-plug | | 
 | :-- | :-- | :-- |
-| supertab: Already installed
-| vim-fugitive: Already installed
-| vim-airline-themes: Already installed
-| vim-surround: Already installed
-| syntastic: Already installed
-| impsort.vim: Already installed
-| nerdtree: Already installed
-| jupyter-vim: Already installed
-| vim-sensible: Already installed
-| dracula: Already installed
-| tabular: Already installed
-| nerdcommenter: Already installed
-| vim-airline: Already installed
-| vimtex: Already installed
-| vim-markdown: Already installed
-| ultisnips | | | 
+| [supertab][1]] | Tab completion | `Plug 'ervandew/supertab'`  |
+| [vim-fugitive][2] | Git wrapper for Vim  | `Plug 'tpope/vim-fugitive'` |
+| [vim-airline-themes][3] |   | `Plug 'vim-airline/vim-airline-themes'` |
+| [vim-surround] |   |
+| [syntastic] |   |
+| [impsort.vim] |   |
+| [nerdtree] |   |
+| [jupyter-vim] |   |
+| [vim-sensible] |   |
+| [dracula] |   |
+| [tabular] |   |
+| [nerdcommenter] |   |
+| [vim-airline] |   |
+| [vimtex] |   |
+| [vim-markdown] |   |
+| [ultisnips] | | | 
 
 
+## Plugin manager
+| Plugin Manager | Description |
+| :---  | :--- |
+| [Pathogen][1] | |
+| [NeoBundle][2] | |
+| [Vundle][3] | |
+| [Plug][4] | |
+| [VAM][5] | |
+| [Dein][6] | |
+| [minpac][7] | |
 
-Pathogen
-Ultisnips
+[1]: https://github.com/ervandew/supertab
+[2]: https://github.com/tpope/vim-fugitive
+[3]: https://github.com/vim-airline/vim-airline-themes 
+
+[1]: https://github.com/tpope/vim-pathogen
+[2]: https://github.com/Shougo/neobundle.vim
+[3]: https://github.com/VundleVim/Vundle.vim
+[4]: https://github.com/junegunn/vim-plug
+[5]: https://github.com/MarcWeber/vim-addon-manager
+[6]: https://github.com/Shougo/dein.vim
+[7]: https://github.com/k-takata/minpac/
