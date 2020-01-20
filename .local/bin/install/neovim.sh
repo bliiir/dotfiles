@@ -10,7 +10,7 @@ mkdir -p $HOME/.config/nvim/sourceforge
 mkdir -p $HOME/.local/share/nvim/swap
 mkdir -p $HOME/.local/share/nvim/undo
 mkdir -p $HOME/.local/share/nvim/backup
-#wget http://www.vim.org/scripts/download_script.php?src_id=13400 -O $HOME/.config/nvim/colors/wombat256mod.vim
+wget http://www.vim.org/scripts/download_script.php?src_id=13400 -O $HOME/.config/nvim/colors/wombat256mod.vim
 
 # nvim python
 # pip2 install --user --upgrade neovim
