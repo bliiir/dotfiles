@@ -4,6 +4,11 @@
 brew install git curl tmux node cmake brew ack tree autojump
 brew cask install iterm2
 
+# Pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+brew install pyenv-virtualenv
+
+brew
 # iperl dependencies
 # brew install zeromq libmagic
 
