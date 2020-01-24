@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = rgr
-	email = rgr@intomics.com
+	name = rg
+	email = rasgroth@gmail.com
 	
 [core]
 	excludesfile = /Users/rgr/.config/git/.gitignore_global
