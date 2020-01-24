@@ -5,7 +5,7 @@
 	ignorecase = true
 	precomposeunicode = true
 	sharedrepository = 0600
-	worktree = /Users/rgr
+	worktree = /Users/rg
 [receive]
 	denyNonFastforwards = true
 [status]
