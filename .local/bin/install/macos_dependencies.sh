@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #install OSX dependencies
-brew install git curl tmux node cmake brew ack tree autojump
+brew install git curl tmux node cmake brew ack tree autojump macvim
 brew cask install iterm2
 
 # Pyenv
@@ -33,3 +33,7 @@ brew install grep --with-default-names
 # OSX specific stuff
 wget https://www.iterm2.com/utilities/imgcat -P ~/.local/bin
 chmod +x ~/.local/bin/imgcat
+
+
+# Install YouCompleteMe
+~/.config/nvim/plugged/YouCompleteMe/install.py --all

@@ -33,8 +33,8 @@ call plug#begin()
 
     " Tab Completion:
 	Plug 'ervandew/supertab'
-	"Plug 'Valloric/YouCompleteMe'
-	"Plug 'sirver/ultisnips'
+	Plug 'Valloric/YouCompleteMe'
+	Plug 'sirver/ultisnips'
 	Plug 'honza/vim-snippets'
 	" Plug 'prabirshrestha/async.vim'
 	" Plug 'prabirshrestha/vim-lsp'
@@ -87,12 +87,11 @@ noremap  [e :lprevious<CR>
 "  - both YouCompleteMe and UltiSnips use the tab key
 "    make them play nice togeter
 " ============================================================
-"let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/plugged/vim-snippets/Ultisnips', $HOME.'/.config/nvim/plugged/vim-snippets/']
+let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/plugged/vim-snippets/Ultisnips', $HOME.'/.config/nvim/plugged/vim-snippets/']
 
-" makes ctrl + j complete snippets
-" let g:UltiSnipsExpandTrigger="<c-j>"
-
-"let g:UltiSnipsUsePythonVersion = 3
+ " makes ctrl + j complete snippets
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsUsePythonVersion = 3
 
 
 " from: https://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
@@ -174,6 +173,7 @@ set nolist  " list disables linebreak
 set textwidth=0
 set wrapmargin=0
 
+
 " ============================================================
 " Color scheme and other ‘estetics’
 " ============================================================"
@@ -181,7 +181,7 @@ colorscheme dracula
 let g:airline_theme='badwolf'
 set colorcolumn=80,100
 "set tw=100  " width of document (used by gd), default was 79
-highlight ColorColumn ctermbg=233
+" highlight ColorColumn ctermbg=233
 
 " ============================================================
 " makes yanked text be yanked into the global clipboard
@@ -271,3 +271,7 @@ hi Normal             ctermfg=252             ctermbg=none            cterm=none
 " Plugin settings
 "============================================================================
 let g:NERDDefaultAlign = 'left'
+
+
+set norelativenumber
+set number
