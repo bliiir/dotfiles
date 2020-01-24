@@ -273,5 +273,5 @@ hi Normal             ctermfg=252             ctermbg=none            cterm=none
 let g:NERDDefaultAlign = 'left'
 
 
-set norelativenumber
+" set norelativenumber
 set number

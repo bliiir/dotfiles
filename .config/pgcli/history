@@ -1,0 +1,887 @@
+
+# 2019-02-04 15:39:57.208337
++l
+
+# 2019-02-04 15:39:59.726407
++\d
+
+# 2019-02-04 15:40:20.393123
++\q
+
+# 2019-02-04 15:55:36.040604
++\d
+
+# 2019-02-04 15:57:23.276333
++'d
+
+# 2019-02-04 15:57:26.391706
++\d
+
+# 2019-02-04 15:57:37.653470
++\c ccat
+
+# 2019-02-04 15:57:39.791678
++\d
+
+# 2019-02-04 15:57:54.990741
++select * from asset
+
+# 2019-02-04 15:58:03.135755
++select * from bucket
+
+# 2019-02-04 16:06:40.796591
++\q
+
+# 2019-02-19 13:57:14.948495
++\d
+
+# 2019-02-19 13:57:51.466010
++\l
+
+# 2019-02-19 14:09:51.037788
++\c ccat
+
+# 2019-02-19 14:09:57.101820
++\d
+
+# 2019-02-19 14:10:38.795577
++select * from instrument
+
+# 2019-02-19 14:12:27.246552
++select * from exchange
+
+# 2019-02-19 14:13:15.150178
++UPDATE exchange SET
++
++        api_key = CASE name
++            WHEN 'Coinbase' THEN 'COINBASE_API_KEY'
++            WHEN 'Coinbase Pro' THEN 'COINBASEPRO_API_KEY'
++            WHEN 'Bittrex' THEN 'BITTREX_API_KEY'
++            WHEN 'Kraken' THEN 'KRAKEN_API_KEY'
++            WHEN 'Poloniex' THEN 'POLONIEX_API_KEY'
++            WHEN 'Bitmex' THEN 'BITMEX_API_KEY'
++            WHEN 'Binance' THEN 'BINANCE_API_KEY'
++            WHEN 'Bitfinex' THEN 'BITFINEX_API_KEY'
++            END,
++
++        api_secret = CASE name
++            WHEN 'Coinbase' THEN 'COINBASE_API_SECRET'
++            WHEN 'Coinbase Pro' THEN 'COINBASEPRO_API_SECRET'
++            WHEN 'Bittrex' THEN 'BITTREX_API_SECRET'
++            WHEN 'Kraken' THEN 'KRAKEN_API_SECRET'
++            WHEN 'Poloniex' THEN 'POLONIEX_API_SECRET'
++            WHEN 'Bitmex' THEN 'BITMEX_API_SECRET'
++            WHEN 'Binance' THEN 'BINANCE_API_SECRET'
++            WHEN 'Bitfinex' THEN 'BITFINEX_API_SECRET'
++            END;
+
+# 2019-02-19 14:13:21.483554
++select * from exchange
+
+# 2019-02-19 14:16:57.104553
++\di+
+
+# 2019-02-19 14:17:20.066287
++\d+
+
+# 2019-02-19 14:18:02.051790
++\d+ market
+
+# 2019-02-19 14:18:29.096591
++select * from market
+
+# 2019-02-19 14:19:38.286606
++\d+ instrument
+
+# 2019-02-19 14:19:52.235557
++DROP VIEW public.instrument;
++CREATE OR REPLACE VIEW public.instrument AS
++ SELECT market.id AS market_id,
++    market.symbol_native AS market_symbol_native,
++    market.symbol_ccxt AS market_symbol_ccxt,
++    market.description AS market_description,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    asset_base.id AS asset_base_id,
++    asset_base.ticker AS asset_base_ticker,
++    asset_base.name AS asset_base_name,
++    asset_quote.id AS asset_quote_id,
++    asset_quote.ticker AS asset_quote_ticker,
++    asset_quote.name AS asset_quote_name,
++    pair.id AS pair_id
++   FROM market
++     INNER JOIN pair ON market.pair_id = pair.id
++     INNER JOIN asset AS asset_base ON pair.asset_base_id = asset_base.id
++     INNER JOIN asset AS asset_quote ON pair.asset_quote_id = asset_quote.id
++     INNER JOIN exchange ON market.exchange_id = exchange.id;
++
++ALTER TABLE public.instrument
++    OWNER TO postgres;
+
+# 2019-02-19 14:20:04.520538
++select * from instrument
+
+# 2019-02-25 15:58:53.069013
++\l
+
+# 2019-02-25 15:58:59.976089
++\c ccat
+
+# 2019-02-25 15:59:05.871024
++\l
+
+# 2019-02-25 15:59:09.932553
++\d
+
+# 2019-03-08 10:31:08.873013
++\l
+
+# 2019-03-08 10:31:13.281272
++\c ccat
+
+# 2019-03-08 10:31:16.129178
++\d
+
+# 2019-03-08 10:31:37.706840
++\di
+
+# 2019-03-08 10:32:38.976159
++\d+ timeframe
+
+# 2019-03-08 10:33:17.793108
++select * from timeframe
+
+# 2019-04-23 15:26:23.796977
++\d
+
+# 2019-04-23 15:26:37.341268
++\c
+
+# 2019-04-23 15:27:07.289145
++\l
+
+# 2019-05-06 15:13:35.844046
++'d
+
+# 2019-05-06 15:13:39.297591
++\d
+
+# 2019-05-06 15:14:09.312257
++\l
+
+# 2019-05-06 15:14:23.196308
++\c ccat
+
+# 2019-05-06 15:14:26.177301
++\d
+
+# 2019-05-06 15:14:51.286637
++select * from bucket where timeframe_id = 4
+
+# 2019-05-06 15:16:22.830358
++select count(*) from bucket where timeframe_id = 4
+
+# 2019-05-06 15:27:05.585076
++select * from bucket where timeframe_id = 4 limit 1
+
+# 2019-05-06 15:27:48.010115
++select * from bucket where timeframe_id = 4 ORDER BY time_open DESC limit 1
+
+# 2019-05-06 15:28:05.627072
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC limit 1
+
+# 2019-05-06 15:29:33.783503
++select * from bucket where timeframe_id = 4 limit 1
+
+# 2019-05-06 15:29:53.730822
++select * from bucket where timeframe_id = 4 ORDER BY time_open DESC limit 1
+
+# 2019-05-06 15:29:57.982265
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC limit 1
+
+# 2019-05-06 15:30:06.240297
++select count(*) from bucket where timeframe_id = 4
+
+# 2019-05-06 15:30:23.611647
++select * from bucket where timeframe_id = 4
+
+# 2019-05-06 15:30:35.198782
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC limit 10
+
+# 2019-05-06 15:31:29.929991
++select * from bucket where timeframe_id = 4
+
+# 2019-05-06 15:32:21.963293
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC
+
+# 2019-05-06 15:34:02.032434
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC limit 10
+
+# 2019-05-06 17:33:28.639252
++\q
+
+# 2019-05-07 12:46:09.087837
++\l
+
+# 2019-05-07 12:46:16.862259
++\c ccat
+
+# 2019-05-07 12:46:19.279818
++\d
+
+# 2019-05-07 12:46:54.582996
++\dT
+
+# 2019-05-07 12:47:23.237095
++\d
+
+# 2019-05-07 12:47:30.966714
++\dT
+
+# 2019-05-07 12:47:39.224083
++\dT bucket
+
+# 2019-05-07 12:47:54.456156
++\d+
+
+# 2019-05-07 12:48:00.149397
++\d+ bucket
+
+# 2019-05-07 12:59:03.966321
++select count(*) from bucket
+
+# 2019-05-08 13:36:55.438266
++\l
+
+# 2019-05-08 13:36:58.937939
++\d
+
+# 2019-05-08 13:37:12.156086
++select * from timeframe
+
+# 2019-05-08 14:14:36.112186
++\d
+
+# 2019-05-08 14:14:46.879444
++select * from exchange
+
+# 2019-05-08 14:16:07.858258
++select * from exchange ORDER BY id ASC
+
+# 2019-05-08 14:17:38.623672
++CREATE TABLE public.timeframe_exchange
++(
++    id SERIAL PRIMARY KEY
++    timeframe_id INTEGER NOT NULL REFERENCES timeframe(id) ON UPDATE CASCADE ON DELETE CASCADE,
++    exchange_id INTEGER NOT NULL REFERENCES exchange(id) ON UPDATE CASCADE ON DELETE CASCADE,
++);
+
+# 2019-05-08 14:18:08.965102
++CREATE TABLE public.timeframe_exchange
++(
++    id SERIAL PRIMARY KEY,
++    timeframe_id INTEGER NOT NULL REFERENCES timeframe(id) ON UPDATE CASCADE ON DELETE CASCADE,
++    exchange_id INTEGER NOT NULL REFERENCES exchange(id) ON UPDATE CASCADE ON DELETE CASCADE
++);
+
+# 2019-05-08 14:18:20.024036
++INSERT INTO timeframe_exchange (timeframe_id, exchange_id) VALUES
++(1, 3),
++(2, 3),
++(4, 3),
++(6, 3);
+
+# 2019-05-08 14:18:33.917930
++select * from timeframe_exchange
+
+# 2019-05-08 14:28:51.563481
++    SELECT
++        timeframe.id,
++        timeframe.name AS timeframe_name,
++        timeframe.miliseconds AS timeframe_miliseconds,
++        exchange.id AS exchange_id,
++        exchange.name AS exchange_name;
+
+# 2019-05-08 14:29:24.189733
++SELECT
++    timeframe.id,
++    timeframe.name AS timeframe_name,
++    timeframe.miliseconds AS timeframe_miliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name;
+
+# 2019-05-08 14:29:53.933879
++select timeframe.id, timeframe.name
+
+# 2019-05-08 14:30:14.825085
++SELECT 
++        market.id AS market_id
+
+# 2019-05-08 14:34:49.261975
++SELECT * FROM timeframe_exchange INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 14:36:04.468872
++select * from exchange
+
+# 2019-05-08 14:36:40.087821
++select * from timeframe
+
+# 2019-05-08 14:37:30.656647
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.miliseconds AS timeframe_miliseconds,
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 14:37:42.413301
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.miliseconds AS timeframe_miliseconds
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 14:38:09.526309
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.miliseconds AS timeframe_miliseconds
++FROM exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 14:38:39.226362
++SELECT 
++    exchange.id AS exchange_id;
+
+# 2019-05-08 14:38:53.155328
++SELECT exchange.id AS exchange_id;
+
+# 2019-05-08 14:39:26.364698
++SELECT 
++    market.id AS market_id,
++    market.symbol_native AS market_symbol_native,
++    market.symbol_ccxt AS market_symbol_ccxt,
++    market.description AS market_description,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    asset_base.id AS asset_base_id,
++    asset_base.ticker AS asset_base_ticker,
++    asset_base.name AS asset_base_name,
++    asset_quote.id AS asset_quote_id,
++    asset_quote.ticker AS asset_quote_ticker,
++    asset_quote.name AS asset_quote_name,
++    pair.id AS pair_id
++FROM market
++    INNER JOIN pair ON market.pair_id = pair.id
++    INNER JOIN asset AS asset_base ON pair.asset_base_id = asset_base.id
++    INNER JOIN asset AS asset_quote ON pair.asset_quote_id = asset_quote.id
++    INNER JOIN exchange ON market.exchange_id = exchange.id;
+
+# 2019-05-08 14:39:54.602347
++SELECT 
++    market.id AS market_id,
++    market.symbol_native AS market_symbol_native,
++    market.symbol_ccxt AS market_symbol_ccxt,
++    market.description AS market_description,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    asset_base.id AS asset_base_id,
++    asset_base.ticker AS asset_base_ticker,
++    asset_base.name AS asset_base_name,
++    asset_quote.id AS asset_quote_id,
++    asset_quote.ticker AS asset_quote_ticker,
++    asset_quote.name AS asset_quote_name,
++    pair.id AS pair_id
++FROM market;
+
+# 2019-05-08 14:40:17.958821
++SELECT 
++    market.id AS market_id,
++    market.symbol_native AS market_symbol_native,
++    market.symbol_ccxt AS market_symbol_ccxt,
++    market.description AS market_description
+
+# 2019-05-08 14:40:25.080089
++SELECT 
++    market.id AS market_id,
++    market.symbol_native AS market_symbol_native,
++    market.symbol_ccxt AS market_symbol_ccxt,
++    market.description AS market_description FROM market
+
+# 2019-05-08 14:40:44.744784
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.miliseconds AS timeframe_miliseconds
++FROM exchange;
+
+# 2019-05-08 14:42:27.864148
++select exchange.id, timeframe.id from exchange;
+
+# 2019-05-08 14:42:40.902700
++select exchange.id from exchange;
+
+# 2019-05-08 14:44:19.330583
++select exchange.id, timeframe.id from exchange INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
+
+# 2019-05-08 15:01:18.054837
++select exchange_id, timeframe_id from timeframe_exchange INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
+
+# 2019-05-08 15:01:53.233584
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.miliseconds AS timeframe_miliseconds
++FROM exchange, timeframe
+
+# 2019-05-08 15:02:22.485403
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds
++FROM exchange, timeframe
+
+# 2019-05-08 15:02:49.181811
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds
++FROM exchange, timeframe
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:03:50.686844
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    timeframe_exchange.id AS timeframe_exchange_id
++FROM exchange, timeframe, timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:04:12.760783
++SELECT 
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    timeframe_exchange.id AS timeframe_exchange_id
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:05:15.018045
++SELECT 
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:05:25.256431
++SELECT 
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:06:08.760041
++SELECT 
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:06:45.864388
++DROP VIEW public.timeframe_exchange;
++CREATE OR REPLACE VIEW public timeframe_exchange AS
++SELECT
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:07:21.943489
++CREATE OR REPLACE VIEW public timeframe_exchange AS
++SELECT
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:07:35.768884
++CREATE OR REPLACE VIEW public.timeframe_exchange AS
++SELECT
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:08:07.348262
++CREATE OR REPLACE VIEW public.valid_timeframe AS
++SELECT
++    timeframe_exchange.id AS timeframe_exchange_id,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds,
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name
++FROM timeframe_exchange
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:08:21.027816
++select * from valid_timeframe
+
+# 2019-05-08 15:41:17.532770
++
++    exchange.id AS exchange_id,
++    exchange.name AS exchange_name,
++    exchange.api_key AS exchange_api_key,
++    exchange.api_secret AS exchange_api_secret,
++    timeframe.id AS timeframe_id,
++    timeframe.name AS timeframe_name,
++    timeframe.milliseconds AS timeframe_milliseconds
++FROM exchange, timeframe
++INNER JOIN exchange ON timeframe_exchange.exchange_id = exchange.id
++INNER JOIN timeframe ON timeframe_exchange.timeframe_id = timeframe.id
+
+# 2019-05-08 15:41:24.193983
++select count(*) from bucket
+
+# 2019-05-08 15:51:20.214649
++SELECT * FROM buckets USING buckets b2
++WHERE buckets.market_id = b2.market_id AND buckets.timeframe_id = b2.timeframe_id AND buckets.time_close = b2.time_close AND buckets.id < b2.id;
+
+# 2019-05-08 15:56:46.873919
++DELETE FROM buckets USING buckets b2
++  WHERE buckets.market_id = b2.market_id AND buckets.timeframe_id = b2.timeframe_id AND buckets.time_close = b2.time_close AND buckets.id < b2.id;
+
+# 2019-05-08 15:57:09.167211
++DELETE FROM bucket USING bucket b2
++  WHERE bucket.market_id = b2.market_id AND bucket.timeframe_id = b2.timeframe_id AND bucket.time_close = b2.time_close AND bucket.id < b2.id;
+
+# 2019-05-08 15:58:15.685923
++DELETE FROM bucket USING bucket b2
++  WHERE bucket.market_id = b2.market_id AND bucket.timeframe_id = b2.timeframe_id AND bucket.time_close = b2.time_close AND bucket.id != b2.id;
+
+# 2019-05-08 15:59:21.003801
++select count(*) from bucket
+
+# 2019-05-08 16:12:32.712968
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC limit 10
+
+# 2019-05-08 16:12:45.504002
++select * from bucket where timeframe_id = 4 ORDER BY time_close ASC
+
+# 2019-05-10 17:40:27.973924
++select * from bucket where timeframe_id = 4 ORDER BY time_open ASC limit 10
+
+# 2019-05-10 17:40:33.711026
++\l
+
+# 2019-05-10 17:40:37.255072
++\d
+
+# 2019-05-10 17:40:46.424364
++select * from valid_timeframe
+
+# 2019-05-10 17:41:01.297362
++select * from valid_timeframe where exchange_id = 3
+
+# 2019-05-14 11:17:20.131877
++\l
+
+# 2019-05-14 11:17:23.567023
++\d
+
+# 2019-05-14 11:17:32.668948
++select * from instrument
+
+# 2019-05-14 11:22:21.445793
++\d+ instrument
+
+# 2019-05-14 11:24:40.587932
++select * from instrument
+
+# 2019-05-14 11:25:14.687266
++select * from market
+
+# 2019-05-14 11:25:49.304099
++select * from timeframe
+
+# 2019-05-14 11:26:01.352863
++select * from exchange
+
+# 2019-05-14 11:26:15.538831
++select * from instrument
+
+# 2019-06-07 13:48:53.715985
++\l
+
+# 2019-06-07 13:49:18.747737
++\c ccat
+
+# 2019-06-07 13:49:25.463795
++\d
+
+# 2019-06-07 13:50:15.369079
++create table public.order
+
+# 2019-06-07 13:50:21.692349
++create table public.order;
+
+# 2019-06-07 13:50:33.887619
++create table public.order
+
+# 2019-06-07 13:52:12.023325
++CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+# 2019-06-07 13:52:29.697566
++SELECT uuid_generate_v1();
+
+# 2019-07-02 14:39:14.705692
++\l
+
+# 2019-07-02 14:39:41.671179
++\c ccat
+
+# 2019-07-02 14:39:51.773965
++\d
+
+# 2019-07-02 14:40:12.485552
++select * from bucket where timeframe_id = 1 ORDER BY time_open ASC limit 10
+
+# 2019-07-02 14:40:22.712632
++select * from bucket where timeframe_id = 1 ORDER BY time_open ASC
+
+# 2019-07-02 14:41:43.938219
++\c ccat
+
+# 2019-07-02 14:41:47.313090
++\d
+
+# 2019-07-02 14:42:00.937374
++select * from bucket where timeframe_id = 1 ORDER BY time_open ASC limit 10
+
+# 2019-07-02 14:42:34.507738
++select * from bucket where timeframe_id = 1 ORDER BY time_open DESC limit 10
+
+# 2019-07-02 15:29:43.837823
++select * from bucket where timeframe_id = 1 ORDER BY time_open ASC limit 10
+
+# 2019-07-04 13:49:36.059348
++\d
+
+# 2019-07-04 13:49:46.270303
++select * from exchange
+
+# 2019-08-07 16:02:03.291439
++\l
+
+# 2019-08-07 16:02:11.007973
++c ccat
+
+# 2019-08-07 16:02:17.837136
++\c ccat
+
+# 2019-08-07 16:02:23.912327
++\d
+
+# 2019-08-07 16:02:33.441150
++select * from market
+
+# 2019-08-19 14:14:56.134891
++\l
+
+# 2019-08-19 14:15:09.938721
++c ccat
+
+# 2019-08-19 14:15:15.540441
++c\ ccat
+
+# 2019-08-19 14:15:36.049406
++\c ccat
+
+# 2019-08-19 14:15:41.202449
++\d
+
+# 2019-08-19 15:16:29.238671
++select * from bitmex_socket
+
+# 2019-08-19 15:17:41.352387
++\d+ bitmex_socket
+
+# 2019-08-19 16:28:07.906922
++drop bitmex_test
+
+# 2019-08-19 16:28:21.519395
++\?
+
+# 2019-08-19 16:29:50.979606
++delete bitmex_test
+
+# 2019-08-19 16:29:56.863783
++\d
+
+# 2019-08-19 16:30:05.999591
++drop bitmex_test
+
+# 2019-08-19 16:30:17.306000
++drop table bitmex_test
+
+# 2019-08-19 16:30:31.031106
++drop table bitmex_socket
+
+# 2019-08-19 16:30:38.174904
++drop table bitmex_quote
+
+# 2019-08-19 16:33:45.231854
++\d
+
+# 2019-08-19 16:33:58.899763
++select * from bitmex_quote
+
+# 2019-08-19 17:29:23.155376
++drop table bitmex_quote
+
+# 2019-08-19 17:29:27.497919
++'d
+
+# 2019-08-19 17:29:28.971216
++\d
+
+# 2019-08-19 17:29:52.134937
++select * from bitmex_quote
+
+# 2019-08-19 17:32:27.296960
++drop table bitmex_quote
+
+# 2019-08-19 17:32:51.350084
++select * from bitmex_quote
+
+# 2019-08-22 14:05:39.227474
++\c ccat
+
+# 2019-08-22 14:05:47.270371
++select * from bitmex_quote
+
+# 2019-08-22 14:05:58.722982
++select count(*) from bitmex_quote
+
+# 2019-08-22 14:21:22.049592
++delete from bitmex_quote as a
++using bitmex_quote as b
++where a.ctid < b.ctid and a.timestamp = b.timestamp;
+
+# 2019-08-22 14:21:37.753849
++select count(*) from bitmex_quote
++;
+
+# 2019-08-22 14:42:37.085104
++drop table bitmex_quote
++;
+
+# 2019-08-23 15:00:47.310945
++\d
+
+# 2019-08-30 14:39:26.292269
++ALTER USER postgres PASSWORD ")p6B,&<5&'3xqM+Q"
+
+# 2019-08-30 14:39:51.345556
++ALTER USER postgres PASSWORD )p6B,&<5&'3xqM+Q
+
+# 2019-08-30 14:41:45.714655
++ALTER USER postgres WITH PASSWORD ')p6B,&<5&'3xqM+Q';
+
+# 2019-08-30 14:42:01.532410
++ALTER USER postgres WITH PASSWORD ")p6B,&<5&'3xqM+Q";
+
+# 2019-08-30 14:42:29.916060
++ALTER USER postgres WITH PASSWORD "V7g934UyjAht8sgC";
+
+# 2019-08-30 14:42:40.232377
++ALTER USER postgres WITH PASSWORD 'V7g934UyjAht8sgC';
+
+# 2019-08-30 14:44:48.575261
++\l
+
+# 2019-08-30 14:44:58.497242
++\q
