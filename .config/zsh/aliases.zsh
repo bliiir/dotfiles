@@ -9,15 +9,11 @@ fi;
 alias chrome=google-chrome
 # TODO alias and completion for the alias
 alias t="todo.sh"
-alias iperl="$HOME/.local/p5-iperl/bin/iperl"
 
 
 if [ $OS = "Darwin" ]; then
 	alias c="pbcopy"
 	alias v="pbpaste"
-	alias excel='/Applications/Microsoft Excel.app'
-	alias word='/Applications/Microsoft Word.app'
-	alias powerpoint='/Applications/Microsoft PowerPoint.app'
 	export PATH="$PATH:/$HOME/Library/Python/2.7/bin"
 	export PATH="$PATH:/$HOME/Library/Python/3.6/bin"
 elif [ $OS = "Linux" ]; then

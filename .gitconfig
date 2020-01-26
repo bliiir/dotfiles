@@ -4,7 +4,7 @@
 	email = rasgroth@gmail.com
 	
 [core]
-	excludesfile = /Users/rgr/.config/git/.gitignore_global
+	excludesfile = ~/.config/git/.gitignore_global
 	eol = native
 	autocrlf = input
 

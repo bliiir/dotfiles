@@ -7,3 +7,5 @@ c1603644ecf310fca975d7c32e2bcef782184bef c1603644ecf310fca975d7c32e2bcef782184be
 c1603644ecf310fca975d7c32e2bcef782184bef a4c9ace4d1bc0600d1b455e63cf155a526f2a952 yadm clone <yadm> 1579899741 +0100	reset: moving to HEAD
 a4c9ace4d1bc0600d1b455e63cf155a526f2a952 a4c9ace4d1bc0600d1b455e63cf155a526f2a952 rg <rasgroth@gmail.com> 1579900009 +0100	reset: moving to HEAD
 a4c9ace4d1bc0600d1b455e63cf155a526f2a952 3fead6927501d1dd3b86c70208a6fd007dabca6c rg <rasgroth@gmail.com> 1579903605 +0100	commit: Tinkering
+3fead6927501d1dd3b86c70208a6fd007dabca6c 216f754b878978cda095b806ca3f5661c48993c2 rg <rasgroth@gmail.com> 1579905091 +0100	commit: Adding config and install dotfiles
+216f754b878978cda095b806ca3f5661c48993c2 216f754b878978cda095b806ca3f5661c48993c2 rg <rasgroth@gmail.com> 1580067931 +0100	reset: moving to HEAD

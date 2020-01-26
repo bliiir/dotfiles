@@ -23,10 +23,9 @@ Run bash script
 
 
 ## Notes
-I am currently using vim-plug to manage plugins
+I am currently using vim-plug[4] to manage plugins
 
 These are the plugins I have installed:
-supertab
 
 ### Plugins for vim
 | Plugin | Description | vim-plug command | 
