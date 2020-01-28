@@ -9,3 +9,6 @@ a4c9ace4d1bc0600d1b455e63cf155a526f2a952 a4c9ace4d1bc0600d1b455e63cf155a526f2a95
 a4c9ace4d1bc0600d1b455e63cf155a526f2a952 3fead6927501d1dd3b86c70208a6fd007dabca6c rg <rasgroth@gmail.com> 1579903605 +0100	commit: Tinkering
 3fead6927501d1dd3b86c70208a6fd007dabca6c 216f754b878978cda095b806ca3f5661c48993c2 rg <rasgroth@gmail.com> 1579905091 +0100	commit: Adding config and install dotfiles
 216f754b878978cda095b806ca3f5661c48993c2 216f754b878978cda095b806ca3f5661c48993c2 rg <rasgroth@gmail.com> 1580067931 +0100	reset: moving to HEAD
+216f754b878978cda095b806ca3f5661c48993c2 89f7bd720b33caeddc9bc61353d5c0242a08c6b9 rg <rasgroth@gmail.com> 1580068224 +0100	commit: dotfile adjustments
+89f7bd720b33caeddc9bc61353d5c0242a08c6b9 89f7bd720b33caeddc9bc61353d5c0242a08c6b9 rg <rasgroth@gmail.com> 1580236500 +0100	reset: moving to HEAD
+89f7bd720b33caeddc9bc61353d5c0242a08c6b9 89f7bd720b33caeddc9bc61353d5c0242a08c6b9 rg <rasgroth@gmail.com> 1580236532 +0100	reset: moving to HEAD
