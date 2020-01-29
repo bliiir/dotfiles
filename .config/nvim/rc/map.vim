@@ -2,9 +2,21 @@
 
 map <Leader>v :source $HOME/.config/nvim/init.vim<CR>
 
-" normal save
+" Save
 noremap <C-s> :w<CR>
-:inoremap <C-s> <Esc>:w<CR>i
+inoremap <C-s> <Esc>:w<CR>i
+
+" Quit
+nnoremap <C-q> :q<CR>
+inoremap <C-q> <Esc>:q<CR>i
+
+" Save and quit
+nnoremap <C-x> :x<CR>
+inoremap <C-x> <Esc>:x<CR>i
+
+" Toggle normal and insert mode
+nnoremap <C-m> i
+inoremap <C-m> <Esc>
 
 " disable formatting when pasting large chunks of code
 set pastetoggle=<F2>
