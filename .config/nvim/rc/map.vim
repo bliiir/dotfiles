@@ -9,14 +9,14 @@ inoremap <C-s> <Esc>:w<CR>i
 " Quit
 nnoremap <C-q> :q<CR>
 inoremap <C-q> <Esc>:q<CR>i
-
+ 
 " Save and quit
 nnoremap <C-x> :x<CR>
 inoremap <C-x> <Esc>:x<CR>i
 
 " Toggle normal and insert mode
-nnoremap <C-m> i
-inoremap <C-m> <Esc>
+nnoremap <C-space> i
+inoremap <C-space> <Esc>
 
 " disable formatting when pasting large chunks of code
 set pastetoggle=<F2>
@@ -34,10 +34,10 @@ imap <C-2> <Esc>2gt
 imap <C-3> <Esc>3gt
 imap <C-4> <Esc>4gt
 imap <C-5> <Esc>5gt
-" <C-6> = previous buffer!
+map <C-6> = previous buffer!
 
-" vmap <expr> > ShiftAndKeepVisualSelection(">")
-" vmap <expr> < ShiftAndKeepVisualSelection("<")
+vmap <expr> > ShiftAndKeepVisualSelection(">")
+vmap <expr> < ShiftAndKeepVisualSelection("<")
 
 
 " wierd ones that I should use
@@ -50,3 +50,16 @@ imap <C-/> "<C-O><Leader>c "
 " Terminal mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 tnoremap <Esc> <C-\><C-n>
+
+"============================================================================
+" insert/remove blank lines in normal mode
+"============================================================================
+" Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
+nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+" keybindings for syntastic
+ noremap  ]e :lnext<CR>
+ noremap  [e :lprevious<CR>
