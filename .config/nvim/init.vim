@@ -152,6 +152,5 @@ set ic
 " Source user defined functions
 hi Normal             ctermfg=252             ctermbg=none            cterm=none              guifg=#e3e0d7   guibg=NONE     gui=none
 
-set norelativenumber
-set number
-
+" set norelativenumber
+" set number
