@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
 #install OSX dependencies
-brew install git curl tmux node cmake brew ack tree autojump macvim 
+brew install curl node cmake ack tree autojump
+
+# Version control
+brew install git
+
+# Terminal
+brew install tmux
 brew cask install iterm2 spectacle
 
 # Pyenv
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-brew install pyenv-virtualenv
+brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
 
 brew
 # iperl dependencies
