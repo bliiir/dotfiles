@@ -134,3 +134,6 @@ fi
 
 # force spark to use python3!
 export PYSPARK_PYTHON=python3
+
+bindkey -v
+export KEYTIMEOUT=1 # Kill the timelag
