@@ -1,6 +1,7 @@
 */repo.git/
 *.local/share/nvim/shada/
-
+*.secret
+.config/nvim/.netrwhist
 
 
 # ------------------------------------------------------------------------------

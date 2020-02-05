@@ -1,0 +1,15 @@
+# Apps
+alias vim=nvim
+alias vi=nvim
+
+# Commands
+alias cpp="pwd | pbcopy"
+
+# Directories
+alias code="~/Dropbox/_code"
+alias work="~/Dropbox/_work"
+alias priv="~/Dropbox/_privat"
+alias jrnl="~/Dropbox/_privat/journal/bliiir/private"
+alias journal="~/Dropbox/_privat/journal/bliiir/private"
+alias snippets="~/.config/nvim/plugged/vim-snippets/UltiSnips"
+alias swp="~/.local/share/nvim/swap"
