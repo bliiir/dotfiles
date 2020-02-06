@@ -47,8 +47,11 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
 
     " Color:
-    Plug 'dracula/vim', { 'as': 'dracula' }
-
+    " Plug 'dracula/vim', { 'as': 'dracula' }
+	" Plug 'niklas-8/vim-darkspace', { 'as': 'darkspace' }
+	" Plug 'phanviet/vim-monokai-pro', { 'as': 'monokai-pro' }
+	Plug 'skielbasa/vim-material-monokai'
+	
     " Markdown:
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
@@ -63,6 +66,34 @@ call plug#begin()
 	Plug 'jupyter-vim/jupyter-vim'
 
 call plug#end()
+
+
+" ------------------------------------------------------------------------------
+" Style
+" ------------------------------------------------------------------------------
+
+set termguicolors
+set background=dark
+
+" dracula
+" colorscheme dracula
+" let g:airline_theme='badwolf'
+
+" darkspace
+" colorscheme darkspace
+" let g:darkspace_italics=1
+" let g:airline_theme='darkspace'
+
+" monokai pro
+" colorscheme monokai_pro
+
+" material monokai
+colorscheme material-monokai
+let g:materialmonokai_italic=1
+let g:materialmonokai_subtle_spell=1
+let g:materialmonokai_custom_lint_indicators=1
+let g:airline_theme='materialmonokai'
+let g:materialmonokai_subtle_airline=1
 
 
 " ------------------------------------------------------------------------------

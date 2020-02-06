@@ -55,8 +55,6 @@ set statusline+=%F  " Show the path and filename at the bottom of the buffer
 
 
 " Colors
-colorscheme dracula
-let g:airline_theme='badwolf'
 set colorcolumn=80,100
 "set tw=100  " width of document (used by gd), default was 79
 " highlight ColorColumn ctermbg=233
