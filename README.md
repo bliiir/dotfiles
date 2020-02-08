@@ -22,51 +22,28 @@ Run bash script
 `bash ~/.local/bin/dotfiles.sh`
 
 
-## Notes
-I am currently using vim-plug[4] to manage plugins
+## Plugins
 
-These are the plugins I have installed:
+### Plugin manager
 
-### Plugins for vim
-| Plugin | Description | vim-plug command | 
-| :-- | :-- | :-- | 
-| [supertab][1] | Tab completion | `Plug 'ervandew/supertab'`  | 
-| [vim-fugitive][2] | Git wrapper for Vim  | `Plug 'tpope/vim-fugitive'` |
-| [vim-airline-themes][3] |   | `Plug 'vim-airline/vim-airline-themes'` |
-| [vim-surround] | | |
-| [syntastic] | | |
-| [impsort.vim] | | |
-| [nerdtree] | | |
-| [jupyter-vim] | | |
-| [vim-sensible] | | |
-| [dracula] | | |
-| [tabular] | | |
-| [nerdcommenter] | | |
-| [vim-airline] | | |
-| [vimtex] | | |
-| [vim-markdown] | | |
-| [ultisnips] | | | 
+[vim-plug](https://github.com/junegunn/vim-plug)
 
+### Plugins
 
-## Plugin manager
-| Plugin Manager | Description |
-| :---  | :--- |
-| [Pathogen][1] | |
-| [NeoBundle][2] | |
-| [Vundle][3] | |
-| [Plug][4] | |
-| [VAM][5] | |
-| [Dein][6] | |
-| [minpac][7] | |
-
-[1]: https://github.com/ervandew/supertab
-[2]: https://github.com/tpope/vim-fugitive
-[3]: https://github.com/vim-airline/vim-airline-themes 
-
-[1]: https://github.com/tpope/vim-pathogen
-[2]: https://github.com/Shougo/neobundle.vim
-[3]: https://github.com/VundleVim/Vundle.vim
-[4]: https://github.com/junegunn/vim-plug
-[5]: https://github.com/MarcWeber/vim-addon-manager
-[6]: https://github.com/Shougo/dein.vim
-[7]: https://github.com/k-takata/minpac/
+- ultisnips
+- [supertab](https://github.com/ervandew/supertab)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- YouCompleteMe
+- vim-snippets
+- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+- nerdtree
+- jupyter-vim
+- vim-surround
+- syntastic
+- impsort.vim
+- vim-material-monokai
+- tabular
+- nerdcommenter
+- vim-airline
+- vimtex
+- vim-markdown
