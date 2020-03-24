@@ -58,8 +58,10 @@ call plug#begin()
 
     " Python:
     Plug 'https://github.com/tweekmonster/impsort.vim'
+	Plug 'tmhedberg/SimpylFold'
+	Plug 'yhat/vim-docstring'
 
-    " Latex:
+ :  " Latex:
     Plug 'lervag/vimtex'
 
 	" jupyter integration
@@ -174,3 +176,8 @@ set statusline+=%*
 "
 "vim.command(cmd)
 
+
+" ------------------------------------------------------------------------------
+" Simplyfold
+" ------------------------------------------------------------------------------
+let g:SimpylFold_docstring_preview = 1

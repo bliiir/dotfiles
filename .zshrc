@@ -139,3 +139,6 @@ export PYSPARK_PYTHON=python3
 
 bindkey -v
 export KEYTIMEOUT=1 # Kill the timelag
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

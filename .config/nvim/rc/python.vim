@@ -42,4 +42,22 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "===============================================================================
 let g:syntastic_python_checkers=['flake8']
 
+" ------------------------------------------------------------------------------ 
+" Folding"
+" ------------------------------------------------------------------------------ 
+
+setlocal foldmethod=syntax
+
+syn region pythonString
+      \ start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend fold
+      \ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
+syn region pythonRawString
+      \ start=+[uU]\=[rR]\z('''\|"""\)+ end="\z1" keepend fold
+      \ contains=pythonSpaceError,pythonDoctest,@Spell
+
+autocmd FileType python setlocal foldenable foldmethod=syntax
+
+let g:SimpylFold_docstring_preview = 1
+
+autocmd FileType python PyDocHide
 

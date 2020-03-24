@@ -4,8 +4,6 @@
 "============================================================================
 
 " === Make shift operations in Visual mode stay in Visual mode afterwards ===
-vmap <expr> > ShiftAndKeepVisualSelection(">")
-vmap <expr> < ShiftAndKeepVisualSelection("<")
 
 function! ShiftAndKeepVisualSelection(cmd, mode)
 	set nosmartindent
@@ -15,7 +13,6 @@ function! ShiftAndKeepVisualSelection(cmd, mode)
 		return a:cmd . ":set smartindent\<CR>"
 	endif
 endfunction
-
 
 " ===== Awesome line number magic BEGIN =====
 " silent! suppresses error messages from before vim 7.3

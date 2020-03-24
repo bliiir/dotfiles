@@ -107,13 +107,13 @@ if $TMUX == ''
 endif
 
 " Folding ---------------------------------------------------------------------- 
-set foldmethod=syntax
+" set foldmethod=syntax
 set foldmethod=indent
 set foldlevel=99
 
 " Make folds auto-open and auto-close when the cursor moves over them
-"set foldopen=all
-"set foldclose=all
+set foldopen=all
+set foldclose=all
 
 " Undo stuff ------------------------------------------------------------------- 
 if has('persistent_undo')
@@ -150,5 +150,5 @@ set ic
 " Source user defined functions
 hi Normal             ctermfg=252             ctermbg=none            cterm=none              guifg=#e3e0d7   guibg=NONE     gui=none
 
-" set norelativenumber
-" set number
+set norelativenumber
+set number

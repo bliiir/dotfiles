@@ -1,10 +1,9 @@
-" config file containing all hotkeys I used
-
+" config file containing all hotkeys
 map <Leader>v :source $HOME/.config/nvim/init.vim<CR>
 
 " Save
 noremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>i
+inoremap <C-s> <Esc>:w<CR> i
 
 " Quit
 nnoremap <C-q> :q<CR>
@@ -16,10 +15,15 @@ inoremap <C-x> <Esc>:x<CR>i
 
 " Toggle normal and insert mode
 nnoremap <C-space> i
-inoremap <C-space> <Esc>
+inoremap <C-space> <Esc> 
 
 " disable formatting when pasting large chunks of code
 set pastetoggle=<F2>
+
+" Keep visual selection after indenting/unindenting
+:vnoremap < <gv
+:vnoremap > >gv
+
 
 " use ctrl + number to switch tab
 " Does not work because of escape carrackter stuff is needed for the terminal
@@ -36,8 +40,8 @@ imap <C-4> <Esc>4gt
 imap <C-5> <Esc>5gt
 map <C-6> = previous buffer!
 
-vmap <expr> > ShiftAndKeepVisualSelection(">")
-vmap <expr> < ShiftAndKeepVisualSelection("<")
+" vmap <expr> > ShiftAndKeepVisualSelection(">")
+" vmap <expr> < ShiftAndKeepVisualSelection("<")
 
 
 " wierd ones that I should use
@@ -57,8 +61,8 @@ tnoremap <Esc> <C-\><C-n>
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
 nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
 nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+" nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+" nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " keybindings for syntastic
  noremap  ]e :lnext<CR>

@@ -1,16 +1,36 @@
+# ------------------------------------------------------------------------------ 
 # Apps
+# ------------------------------------------------------------------------------ 
 alias vim=nvim
 alias vi=nvim
 
+# ------------------------------------------------------------------------------ 
 # Commands
+# ------------------------------------------------------------------------------ 
 alias cpp="pwd | pbcopy"
 
+# ------------------------------------------------------------------------------ 
 # Directories
+# ------------------------------------------------------------------------------ 
+
+# Code
 alias code="~/Dropbox/_code"
-alias work="~/Dropbox/_work"
-alias priv="~/Dropbox/_privat"
 alias ccat="~/Dropbox/_code/python/trading/ccat/ccat"
+
+# Work
+alias work="~/Dropbox/_work"
+
+# privat
+alias priv="~/Dropbox/_privat"
 alias jrnl="~/Dropbox/_privat/journal/bliiir/private"
 alias journal="~/Dropbox/_privat/journal/bliiir/private"
+alias cheatsheets="~/Dropbox/_privat/journal/bliiir/coding/cheatsheets/"
+alias walkthroughs="~/Dropbox/_privat/journal/bliiir/coding/walkthroughs/"
+alias notes="~/Dropbox/_privat/journal/bliiir/coding/notes/"
+
+# .config
+alias cf="~/.config/"
+alias rc="~/.config/nvim/rc/"
 alias snippets="~/.config/nvim/plugged/vim-snippets/UltiSnips"
-alias swp="~/.local/share/nvim/swap"
+
+alias swap="~/.local/share/nvim/swap"
