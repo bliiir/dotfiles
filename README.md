@@ -29,7 +29,7 @@ Run bash script
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ### Plugins
-Run `:PlugInstall` in vim to update and `:PlugClean` to update as needed
+Run `:PlugInstall` and `:PlugClean` in vim to update as needed
 
 - ultisnips
 - [supertab](https://github.com/ervandew/supertab)
