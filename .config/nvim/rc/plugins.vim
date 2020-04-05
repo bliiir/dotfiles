@@ -32,12 +32,15 @@ call plug#begin()
 
     " Syntax:
     Plug 'vim-syntastic/syntastic'
+	Plug 'nvie/vim-flake8'
+	" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
     " Tab Completion:
-	Plug 'ervandew/supertab'
+	" Plug 'ervandew/supertab'
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'sirver/ultisnips'
 	Plug 'honza/vim-snippets'
+	Plug 'davidhalter/jedi-vim'
 	" Plug 'prabirshrestha/async.vim'
 	" Plug 'prabirshrestha/vim-lsp'
 	" Plug 'thomasfaingnaert/vim-lsp-snippets'
@@ -55,6 +58,7 @@ call plug#begin()
     " Markdown:
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
     " Python:
     Plug 'https://github.com/tweekmonster/impsort.vim'
@@ -74,20 +78,8 @@ call plug#end()
 " Style
 " ------------------------------------------------------------------------------
 
-set termguicolors
 set background=dark
-
-" dracula
-" colorscheme dracula
-" let g:airline_theme='badwolf'
-
-" darkspace
-" colorscheme darkspace
-" let g:darkspace_italics=1
-" let g:airline_theme='darkspace'
-
-" monokai pro
-" colorscheme monokai_pro
+set termguicolors
 
 " material monokai
 colorscheme material-monokai
@@ -120,17 +112,15 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/plugged/vim
 
  " makes ctrl + j complete snippets
 let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsUsePythonVersion = 3
-
 
 " from: https://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
+" let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
@@ -181,3 +171,36 @@ set statusline+=%*
 " Simplyfold
 " ------------------------------------------------------------------------------
 let g:SimpylFold_docstring_preview = 1
+
+
+" ------------------------------------------------------------------------------
+" Flake8
+" ------------------------------------------------------------------------------
+let g:flake8_show_in_gutter=1
+let g:flake8_show_in_file=1
+"
+" ------------------------------------------------------------------------------
+" Markdown preview
+" ------------------------------------------------------------------------------
+" https://github.com/iamcco/markdown-preview.nvim/tree/d84315616169d24450847a03fd5d3dc68a666597
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 1
+let g:mkdp_command_for_global = 1
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {}
+    \ }
+
+
+" ------------------------------------------------------------------------------
+" vim-doctring 
+" " ------------------------------------------------------------------------------
+" autocmd FileType python PyDocHide

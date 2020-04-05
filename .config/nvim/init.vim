@@ -15,13 +15,13 @@ source $HOME/.config/nvim/rc/functions.vim
 source $HOME/.config/nvim/rc/map.vim
 
 " file type specific vim config
-autocmd BufNewFile,BufRead Snakefile,*.py,*.ipy  source $HOME/.config/nvim/rc/python.vim
 autocmd BufNewFile,BufRead *.js  source $HOME/.config/nvim/rc/java_script.vim
-autocmd BufNewFile,BufRead *.cs source $HOME/.config/nvim/rc/cs.vim
-autocmd BufNewFile,BufRead *.c,*.cpp  source $HOME/.config/nvim/rc/c.vim
+" autocmd BufNewFile,BufRead *.cs source $HOME/.config/nvim/rc/cs.vim
+" autocmd BufNewFile,BufRead *.c,*.cpp  source $HOME/.config/nvim/rc/c.vim
 autocmd BufNewFile,BufRead *.tex source $HOME/.config/nvim/rc/latex.vim
 autocmd BufNewFile,BufRead *.md  source $HOME/.config/nvim/rc/markdown.vim
 autocmd BufNewFile,BufRead *.html,*.xhtml  source $HOME/.config/nvim/rc/html.vim
+autocmd BufNewFile,BufRead Snakefile,*.py,*.ipy  source $HOME/.config/nvim/rc/python.vim
 
 
 " ------------------------------------------------------------------------------ 
@@ -58,7 +58,6 @@ set statusline+=%F  " Show the path and filename at the bottom of the buffer
 set colorcolumn=80,100
 "set tw=100  " width of document (used by gd), default was 79
 " highlight ColorColumn ctermbg=233
-
 
 "------------------------------------------------------------------------------- 
 " define variables (let clause)
@@ -109,7 +108,7 @@ endif
 " Folding ---------------------------------------------------------------------- 
 " set foldmethod=syntax
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=81
 
 " Make folds auto-open and auto-close when the cursor moves over them
 set foldopen=all
@@ -148,7 +147,9 @@ set smartcase
 set ic
 
 " Source user defined functions
-hi Normal             ctermfg=252             ctermbg=none            cterm=none              guifg=#e3e0d7   guibg=NONE     gui=none
+hi Normal ctermfg=252 ctermbg=none cterm=none guifg=#e3e0d7 guibg=NONE     gui=none
 
 set norelativenumber
 set number
+" highlight String cterm=italic gui=italic
+

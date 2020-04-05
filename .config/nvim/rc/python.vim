@@ -9,6 +9,7 @@ set expandtab
 set syntax=python
 set textwidth=99
 setf python
+filetype indent plugin on
 
 " allows ctrl+R + i to dump an ipdb trace
 let @i='import colored_traceback.auto; import ipdb; ipdb.set_trace()  # noqa'
@@ -33,11 +34,6 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 "===============================================================================
-" Python UltiSnippets
-"===============================================================================
-" UltiSnipsAddFileTypes python
-
-"===============================================================================
 " Python Syntastic
 "===============================================================================
 let g:syntastic_python_checkers=['flake8']
@@ -46,18 +42,36 @@ let g:syntastic_python_checkers=['flake8']
 " Folding"
 " ------------------------------------------------------------------------------ 
 
-setlocal foldmethod=syntax
-
 syn region pythonString
-      \ start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend fold
-      \ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
+	  \ start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend fold
+	  \ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
 syn region pythonRawString
-      \ start=+[uU]\=[rR]\z('''\|"""\)+ end="\z1" keepend fold
-      \ contains=pythonSpaceError,pythonDoctest,@Spell
+	  \ start=+[uU]\=[rR]\z('''\|"""\)+ end="\z1" keepend fold
+	  \ contains=pythonSpaceError,pythonDoctest,@Spell
 
 autocmd FileType python setlocal foldenable foldmethod=syntax
 
-let g:SimpylFold_docstring_preview = 1
-
+" vim-docstring
 autocmd FileType python PyDocHide
+
+" ------------------------------------------------------------------------------ 
+" Syntax
+" ------------------------------------------------------------------------------ 
+syn region pythonDocString start="'''" end="'''" 
+	\ keepend fold 
+	\ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
+syn region pythonDocString start='"""' end='"""' 
+	\ keepend fold 
+	\ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
+
+syn match pythonInstance '\S*\.'
+syn match pythonMethod '\S*\..*\('
+" 
+" Must be at the end of the file
+" Checks to see if syntax has already been enabled
+if exists("b:current_syntax")
+  finish
+endif
+
+syntax enable
 

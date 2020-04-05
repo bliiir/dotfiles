@@ -59,8 +59,8 @@ tnoremap <Esc> <C-\><C-n>
 " insert/remove blank lines in normal mode
 " ---------------------------------------------------------------------------
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
-nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+" nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+" nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
 " nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 " nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
@@ -77,3 +77,6 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+
+

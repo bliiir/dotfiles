@@ -3,6 +3,7 @@
 # ------------------------------------------------------------------------------ 
 alias vim=nvim
 alias vi=nvim
+alias jl="jupyter lab"
 
 # ------------------------------------------------------------------------------ 
 # Commands
@@ -16,6 +17,9 @@ alias cpp="pwd | pbcopy"
 # Code
 alias code="~/Dropbox/_code"
 alias ccat="~/Dropbox/_code/python/trading/ccat/ccat"
+alias explore="~/Dropbox/_code/python/trading/ccat/ccat/explore/"
+alias ml="/Users/rg/Dropbox/_code/python/ml"
+
 
 # Work
 alias work="~/Dropbox/_work"
@@ -28,9 +32,8 @@ alias cheatsheets="~/Dropbox/_privat/journal/bliiir/coding/cheatsheets/"
 alias walkthroughs="~/Dropbox/_privat/journal/bliiir/coding/walkthroughs/"
 alias notes="~/Dropbox/_privat/journal/bliiir/coding/notes/"
 
-# .config
+# Environment
 alias cf="~/.config/"
 alias rc="~/.config/nvim/rc/"
-alias snippets="~/.config/nvim/plugged/vim-snippets/UltiSnips"
-
+alias snippets="/Users/rg/.config/nvim/plugged/vim-snippets/snippets"
 alias swap="~/.local/share/nvim/swap"
