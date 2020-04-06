@@ -15,62 +15,64 @@
 call plug#begin()
     
 	" On-demand loading
-    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-    if !has('nvim')
-        Plug 'tpope/vim-sensible'
-    else
-        set termguicolors
-    endif
-
-    " General:
-    Plug 'scrooloose/nerdcommenter'
-
-    "Plug 'freeo/vim-kalisi'
-    Plug 'tpope/vim-surround'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-
-    " Syntax:
-    Plug 'vim-syntastic/syntastic'
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	if !has('nvim')
+		Plug 'tpope/vim-sensible'
+	else
+		set termguicolors
+	endif
+ 
+	" General:
+	Plug 'scrooloose/nerdcommenter'
+ 
+	Plug 'freeo/vim-kalisi'
+	Plug 'tpope/vim-surround'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+ 
+	" Syntax:
+	Plug 'vim-syntastic/syntastic'
 	Plug 'nvie/vim-flake8'
-	" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-
-    " Tab Completion:
-	" Plug 'ervandew/supertab'
+	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+ 
+	" Tab Completion:
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'sirver/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'davidhalter/jedi-vim'
-	" Plug 'prabirshrestha/async.vim'
-	" Plug 'prabirshrestha/vim-lsp'
-	" Plug 'thomasfaingnaert/vim-lsp-snippets'
-	" Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+	Plug 'prabirshrestha/async.vim'
+	Plug 'prabirshrestha/vim-lsp'
+	Plug 'thomasfaingnaert/vim-lsp-snippets'
+	Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+	" Plug 'ervandew/supertab'
 	
-    " Git:
-    Plug 'tpope/vim-fugitive'
-
-    " Color:
-    " Plug 'dracula/vim', { 'as': 'dracula' }
+	" Git:
+	Plug 'tpope/vim-fugitive'
+ 
+	" Color:
+	Plug 'skielbasa/vim-material-monokai'
+	" Plug 'dracula/vim', { 'as': 'dracula' }
 	" Plug 'niklas-8/vim-darkspace', { 'as': 'darkspace' }
 	" Plug 'phanviet/vim-monokai-pro', { 'as': 'monokai-pro' }
-	Plug 'skielbasa/vim-material-monokai'
 	
-    " Markdown:
-    Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
+	" Markdown:
+	Plug 'plasticboy/vim-markdown'
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-
-    " Python:
-    Plug 'https://github.com/tweekmonster/impsort.vim'
+ 
+	" Python:
+	Plug 'tweekmonster/impsort.vim'
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'yhat/vim-docstring'
-
- :  " Latex:
-    Plug 'lervag/vimtex'
-
-	" jupyter integration
+ 
+	" Latex:
+	Plug 'lervag/vimtex'
+ 
+	" Jupyter:
 	Plug 'jupyter-vim/jupyter-vim'
 
+	" Tabularize:
+	Plug 'godlygeek/tabular'
+ 
 call plug#end()
 
 
