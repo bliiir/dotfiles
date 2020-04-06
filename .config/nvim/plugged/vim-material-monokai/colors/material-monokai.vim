@@ -74,49 +74,42 @@ function! s:h(group, style)
     \ "cterm="   (!empty(s:ctermformat) ? s:ctermformat   : "NONE")
 endfunction
 
-
 " Palettes
 " --------
-let s:white			= { "gui": "#CDD3DE", "cterm": "253" }
-let s:lightgrey		= { "gui": "#575b61", "cterm": "241" }
-let s:coolgrey		= { "gui": "#506E79", "cterm": "241" }
-let s:grey			= { "gui": "#3F565F", "cterm": "238" }
-let s:darkgrey		= { "gui": "#232E33", "cterm": "236" }
-let s:lightblack2	= { "gui": "#383a3e", "cterm": "236" }
-let s:lightblack	= { "gui": "#2D2E27", "cterm": "234" }
-let s:black			= { "gui": "#263238", "cterm": "235" }
-let s:darkblack		= { "gui": "#1F292D", "cterm": "233" }
 
-let s:yellow		= { "gui": "#E6DB74", "cterm": "186" }
-let s:orange		= { "gui": "#FD9720", "cterm": "208" }
-let s:red			= { "gui": "#e73c50", "cterm": "196" }
-let s:pink			= { "gui": "#FC3488", "cterm": "197" }
-let s:purple		= { "gui": "#ae81ff", "cterm": "141" }
-let s:blue			= { "gui": "#82B1FF", "cterm": "81" }
-let s:aqua			= { "gui": "#66d9ef", "cterm": "81" }
-let s:green			= { "gui": "#A6E22E", "cterm": "148" }
 
-let s:darkred		= { "gui": "#5f0000", "cterm": "52" }
+let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
+let s:black       = { "gui": "#263238", "cterm": "235" }
+let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
+let s:lightblack2 = { "gui": "#383a3e", "cterm": "236" }
+let s:darkblack   = { "gui": "#1F292D", "cterm": "233" }
+let s:grey        = { "gui": "#3F565F", "cterm": "238" }
+let s:lightgrey   = { "gui": "#575b61", "cterm": "241" }
+let s:darkgrey    = { "gui": "#232E33", "cterm": "236" }
+let s:coolgrey    = { "gui": "#506E79", "cterm": "241" }
 
-let s:lightyellow	= { "gui": "#E6DB74", "cterm": "186" }
-let s:muddyorange	= { "gui": "#97882F", "cterm": "241" }
+let s:pink        = { "gui": "#FC3488", "cterm": "197" }
+let s:green       = { "gui": "#A6E22E", "cterm": "148" }
+let s:aqua        = { "gui": "#66d9ef", "cterm": "81" }
+let s:blue        = { "gui": "#82B1FF", "cterm": "81" }
+let s:yellow      = { "gui": "#E6DB74", "cterm": "186" }
+let s:orange      = { "gui": "#FD9720", "cterm": "208" }
+let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
+let s:red         = { "gui": "#e73c50", "cterm": "196" }
+let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
-let s:brown			= { "gui": "#7E7F68", "cterm": "200" }
-let s:darkbrown		= { "gui": "#4D4D47", "cterm": "200" }
-
-let s:addfg			= { "gui": "#d7ffaf", "cterm": "193" }
-let s:addbg			= { "gui": "#5f875f", "cterm": "65" }
-let s:delbg			= { "gui": "#f75f5f", "cterm": "167" }
-let s:changefg		= { "gui": "#d7d7ff", "cterm": "189" }
-let s:changebg		= { "gui": "#5f5f87", "cterm": "60" }
-
+let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
+let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
+let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
+let s:changefg    = { "gui": "#d7d7ff", "cterm": "189" }
+let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 
 " Highlighting
 " ------------
 
 " editor
 call s:h("Normal",        { "fg": s:white,      "bg": s:black })
-call s:h("ColorColumn",   {                     "bg": s:darkgrey })
+call s:h("ColorColumn",   {                     "bg": s:lightgrey })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:darkblack })
 call s:h("NonText",       { "fg": s:lightgrey })
@@ -133,12 +126,11 @@ call s:h("MoreMsg",       { "fg": s:yellow })
 call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": "standout" })
 call s:h("WarningMsg",    { "fg": s:red })
 call s:h("VertSplit",     { "fg": s:grey,       "bg": s:darkgrey })
-call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkblack })
-call s:h("CursorLineNr",  { "fg": s:white,      "bg": s:darkblack })
-call s:h("SignColumn",    {                     "bg": s:black })
+call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkgrey })
+call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
+call s:h("SignColumn",    {                     "bg": s:lightblack })
 call s:h("SpellCap",      {                                           "format": "underline"})
 call s:h("SpellLocal",    { "fg": s:yellow,                           "format": "underline"})
-
 if g:materialmonokai_subtle_spell == 1
   call s:h("SpellBad",    {                                           "format": "underline"})
 else
@@ -173,9 +165,9 @@ call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 call s:h("Constant",      { "fg": s:purple })
 call s:h("Number",        { "fg": s:purple })
 call s:h("Float",         { "fg": s:purple })
-call s:h("Boolean",       { "fg": s:pink })
+call s:h("Boolean",       { "fg": s:purple })
 call s:h("Character",     { "fg": s:yellow })
-call s:h("String",        { "fg": s:brown, "format": "italic" })  " hits strings that are not comments in python
+call s:h("String",        { "fg": s:yellow })
 
 call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
@@ -183,16 +175,15 @@ call s:h("StorageClass",  { "fg": s:aqua })
 call s:h("Typedef",       { "fg": s:aqua })
 
 call s:h("Identifier",    { "fg": s:green })
-call s:h("Function",      { "fg": s:blue })
+call s:h("Function",      { "fg": s:green })
 
-call s:h("Statement",     { "fg": s:pink })  " hits `def` in python
-call s:h("Operator",      { "fg": s:pink })  " no effect in python
-call s:h("Label",         { "fg": s:pink })  " no effect in python
-call s:h("Keyword",       { "fg": s:aqua })  " hits imports in python
-
-call s:h("Exception",		{ "fg": s:red })  " hits `try` and `except` in Python
-call s:h("Conditional",     { "fg": s:lightyellow })  " hits if in python
-call s:h("Repeat",			{ "fg": s:lightyellow })  " hits while in python
+call s:h("Statement",     { "fg": s:pink })
+call s:h("Operator",      { "fg": s:pink })
+call s:h("Label",         { "fg": s:pink })
+call s:h("Keyword",       { "fg": s:aqua })
+"        Conditional"
+"        Repeat"
+"        Exception"
 
 call s:h("PreProc",       { "fg": s:green })
 call s:h("Include",       { "fg": s:pink })
@@ -203,15 +194,12 @@ call s:h("PreCondit",     { "fg": s:green })
 call s:h("Special",       { "fg": s:aqua })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:red })
-call s:h("SpecialComment",{ "fg": s:grey })
+call s:h("SpecialComment",{ "fg": s:aqua })
 call s:h("Tag",           { "fg": s:pink })
+"        Debug"
 
-" call s:h("Debug",         { 'fg': s:aqua,     'format': 'bold,italic' })
-call s:h("Debug",         { "fg": s:aqua,     "format": "bold" })
-" call s:h("Todo",          { 'fg': s:aqua,     'format': 'bold,italic' })
-call s:h("Todo",          { "fg": s:aqua,     "format": "bold" })
-" call s:h("Comment",       { 'fg': s:coolgrey, 'format': "italic' })
-call s:h("Comment",       { "fg": s:coolgrey })
+call s:h("Todo",          { "fg": s:aqua,     "format": "bold,italic" })
+call s:h("Comment",       { "fg": s:coolgrey, "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
@@ -264,12 +252,6 @@ call s:h("jpropertiesIdentifier",   { "fg": s:pink })
 
 " Vim command
 call s:h("vimCommand",              { "fg": s:pink })
-
-" Python
-call s:h("pythonDocString",     { "fg": s:darkbrown })
-call s:h("pythonMethod",		{ "fg": s:darkred })
-call s:h("Variable",			{ "fg": s:red })
-
 
 " Javascript
 call s:h("jsFuncName",          { "fg": s:green })
@@ -401,7 +383,7 @@ call s:h("cDefine",                     { "fg": s:green })
 
 " Markdown
 call s:h("mkdDelimiter",                { "fg": s:blue })
-call s:h("mkdCode",                     { "fg": s:yellow })
+call s:h("mkdCode",                     { "fg": s:white })
 call s:h("mkdLink",                     { "fg": s:green })
 call s:h("mkdListItem",                 { "fg": s:orange })
 call s:h("mkdURL",                      { "fg": s:pink })
