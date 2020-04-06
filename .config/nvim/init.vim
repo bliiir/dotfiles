@@ -55,7 +55,7 @@ set statusline+=%F  " Show the path and filename at the bottom of the buffer
 
 
 " Colors
-set colorcolumn=80,100
+set colorcolumn=72,79,100
 "set tw=100  " width of document (used by gd), default was 79
 " highlight ColorColumn ctermbg=233
 
@@ -108,7 +108,7 @@ endif
 " Folding ---------------------------------------------------------------------- 
 " set foldmethod=syntax
 set foldmethod=indent
-set foldlevel=81
+set foldlevel=80
 
 " Make folds auto-open and auto-close when the cursor moves over them
 set foldopen=all
@@ -147,9 +147,9 @@ set smartcase
 set ic
 
 " Source user defined functions
-hi Normal ctermfg=252 ctermbg=none cterm=none guifg=#e3e0d7 guibg=NONE     gui=none
+hi Normal ctermfg=252 ctermbg=none cterm=none guifg=#e3e0d7 guibg=NONE gui=none
 
 set norelativenumber
 set number
-" highlight String cterm=italic gui=italic
+" highlight String cterm=italic gui=italic                                    
 
