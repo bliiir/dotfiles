@@ -64,8 +64,7 @@ syn region pythonDocString start='"""' end='"""'
 	\ keepend fold 
 	\ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
 
-syn match pythonInstance '\S*\.'
-syn match pythonMethod '\S*\..*\('
+" syn match pythonInstance '\S*\.'
 " 
 " Must be at the end of the file
 " Checks to see if syntax has already been enabled
