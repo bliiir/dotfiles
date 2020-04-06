@@ -74,10 +74,9 @@ function! s:h(group, style)
     \ "cterm="   (!empty(s:ctermformat) ? s:ctermformat   : "NONE")
 endfunction
 
+
 " Palettes
 " --------
-
-
 let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
 let s:black       = { "gui": "#263238", "cterm": "235" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
@@ -103,6 +102,7 @@ let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
 let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
 let s:changefg    = { "gui": "#d7d7ff", "cterm": "189" }
 let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
+
 
 " Highlighting
 " ------------
@@ -159,6 +159,7 @@ call s:h("PmenuSel",      { "fg": s:pink,       "bg": s:white,      "format": "r
 call s:h("PmenuThumb",    { "fg": s:lightblack, "bg": s:grey })
 "        PmenuSbar"
 
+
 " Generic Syntax Highlighting
 " ---------------------------
 
@@ -181,9 +182,9 @@ call s:h("Statement",     { "fg": s:pink })
 call s:h("Operator",      { "fg": s:pink })
 call s:h("Label",         { "fg": s:pink })
 call s:h("Keyword",       { "fg": s:aqua })
-"        Conditional"
-"        Repeat"
-"        Exception"
+" call s:h("Repeat",		  { 'fg': s:green })
+" call s:h("Conditional",	  { 'fg': s:blue })
+" call s:h("Exception",		{ 'fg': s:red })
 
 call s:h("PreProc",       { "fg": s:green })
 call s:h("Include",       { "fg": s:pink })
