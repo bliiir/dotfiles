@@ -20,7 +20,6 @@ alias ccat="~/Dropbox/_code/python/trading/ccat/ccat"
 alias explore="~/Dropbox/_code/python/trading/ccat/ccat/explore/"
 alias ml="/Users/rg/Dropbox/_code/python/ml"
 
-
 # Work
 alias work="~/Dropbox/_work"
 
@@ -37,3 +36,14 @@ alias cf="~/.config/"
 alias rc="~/.config/nvim/rc/"
 alias snippets="/Users/rg/.config/nvim/plugged/vim-snippets/snippets"
 alias swap="~/.local/share/nvim/swap"
+
+# Intomics
+alias docs="~/Documents"
+alias api="~/Documents/ppi_api/ppi_api/app"
+alias cli="~/Documents/ppi_cli"
+alias lib="~/Documents/ppi_lib"
+alias deploy="~/Documents/inBioDeploy"
+alias distconf="~/Documents/inBioDeploy/distconf"
+alias platform="~/Documents/inBioPlatformAPI/web_api/app"
+alias front="~/Documents/inBioPlatformFront"
+alias cypress="~/Documents/inBioPlatformFront/source"
