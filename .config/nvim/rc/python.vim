@@ -57,9 +57,9 @@ autocmd FileType python PyDocHide
 " ------------------------------------------------------------------------------ 
 " Syntax
 " ------------------------------------------------------------------------------ 
-syn region pythonDocString start="'''" end="'''" 
-	\ keepend fold 
-	\ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
+" syn region pythonDocString start="'''" end="'''" 
+"     \ keepend fold 
+"     \ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
 syn region pythonDocString start='"""' end='"""' 
 	\ keepend fold 
 	\ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell

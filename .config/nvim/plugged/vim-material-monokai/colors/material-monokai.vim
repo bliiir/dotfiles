@@ -209,7 +209,7 @@ call s:h("Error",         { "fg": s:red, "bg": s:darkred })
 
 " Python
 " ------
-call s:h("pythonDocString",     { "fg": s:grey })
+call s:h("pythonDocString",{ "fg": s:grey,		"format": "italic" })
 
 " ALE
 " ---

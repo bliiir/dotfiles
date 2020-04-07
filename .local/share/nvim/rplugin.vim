@@ -2,7 +2,7 @@
 
 
 " python3 plugins
-call remote#host#RegisterPlugin('python3', '/Users/rg/.config/nvim/plugged/semshi/rplugin/python3/semshi', [
+call remote#host#RegisterPlugin('python3', '/Users/rgr/.config/nvim/plugged/semshi/rplugin/python3/semshi', [
       \ {'sync': v:true, 'name': 'SemshiInternalEval', 'type': 'function', 'opts': {}},
       \ {'sync': v:true, 'name': 'Semshi', 'type': 'command', 'opts': {'complete': 'customlist,SemshiComplete', 'nargs': '*'}},
       \ {'sync': v:true, 'name': 'SemshiBufEnter', 'type': 'function', 'opts': {}},
