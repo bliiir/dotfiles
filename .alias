@@ -14,11 +14,15 @@ alias cpp="pwd | pbcopy"
 # Directories
 # ------------------------------------------------------------------------------ 
 
+# General
+alias drop="~/Dropbox"
+alias docs="~/Documents"
+
 # Code
 alias code="~/Dropbox/_code"
 alias ccat="~/Dropbox/_code/python/trading/ccat/ccat"
 alias explore="~/Dropbox/_code/python/trading/ccat/ccat/explore/"
-alias ml="/Users/rg/Dropbox/_code/python/ml"
+alias ml="~/Dropbox/_code/python/ml"
 
 # Work
 alias work="~/Dropbox/_work"
@@ -34,11 +38,10 @@ alias notes="~/Dropbox/_privat/journal/bliiir/coding/notes/"
 # Environment
 alias cf="~/.config/"
 alias rc="~/.config/nvim/rc/"
-alias snippets="/Users/rg/.config/nvim/plugged/vim-snippets/snippets"
+alias snippets="~/.config/nvim/plugged/vim-snippets/snippets"
 alias swap="~/.local/share/nvim/swap"
 
 # Intomics
-alias docs="~/Documents"
 alias api="~/Documents/ppi_api/ppi_api/app"
 alias cli="~/Documents/ppi_cli"
 alias lib="~/Documents/ppi_lib"
