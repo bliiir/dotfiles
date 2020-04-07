@@ -1,0 +1,1 @@
+ERROR 2020-03-28T16:47:12.761 32759 tui_terminal_stop:374: TUI already stopped (race?)
