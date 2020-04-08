@@ -110,7 +110,11 @@ let g:NERDDefaultAlign = 'left'
 " both YouCompleteMe and UltiSnips use the tab key
 " make them play nice togeter
 "
-let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/plugged/vim-snippets/Ultisnips', $HOME.'/.config/nvim/plugged/vim-snippets/']
+let g:UltiSnipsSnippetDirectories=[ 
+			\ "UltiSnips",
+			\ $HOME.'/.config/nvim/plugged/vim-snippets/Ultisnips', 
+			\ $HOME.'/.config/nvim/plugged/vim-snippets/', 
+			\ $HOME.'/.config/nvim/plugged/vim-snippets-custom']
 
  " makes ctrl + j complete snippets
 let g:UltiSnipsExpandTrigger="<c-j>"
