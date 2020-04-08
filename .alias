@@ -36,12 +36,14 @@ alias walkthroughs="~/Dropbox/_privat/journal/bliiir/coding/walkthroughs/"
 alias notes="~/Dropbox/_privat/journal/bliiir/coding/notes/"
 
 # Environment
+alias al="~/.alias"
 alias cf="~/.config/"
 alias rc="~/.config/nvim/rc/"
-alias snippets="~/.config/nvim/plugged/vim-snippets/snippets"
+alias plugged="~/.config/nvim/plugged/"
 alias swap="~/.local/share/nvim/swap"
 
 # Intomics
+alias intomics="~/Dropbox/_work/intomics/md"
 alias api="~/Documents/ppi_api/ppi_api/app"
 alias cli="~/Documents/ppi_cli"
 alias lib="~/Documents/ppi_lib"
@@ -50,3 +52,8 @@ alias distconf="~/Documents/inBioDeploy/distconf"
 alias platform="~/Documents/inBioPlatformAPI/web_api/app"
 alias front="~/Documents/inBioPlatformFront"
 alias cypress="~/Documents/inBioPlatformFront/source"
+
+# Build docker containers
+alias dpl_api="~/Documents/ppi_api/ | ./deploy -f rgr-bubo-api"
+alias dpl_front="~/Documents/ppi_api/ | ./deploy -f rgr-bubo-api"
+alias dpl_platform="~/Documents/ppi_api/ | ./deploy -f rgr-bubo-api"
