@@ -91,7 +91,7 @@ set nowrap  " Do not wrap lines
 "set nolist  " list disables linebreak
 set linebreak
 set nolist  " list disables linebreak
-set textwidth=0
+set textwidth=79
 set wrapmargin=0
 
 "------------------------------------------------------------------------------- 
@@ -108,7 +108,7 @@ endif
 " Folding ---------------------------------------------------------------------- 
 " set foldmethod=syntax
 set foldmethod=indent
-set foldlevel=80
+set foldlevel=100
 
 " Make folds auto-open and auto-close when the cursor moves over them
 set foldopen=all

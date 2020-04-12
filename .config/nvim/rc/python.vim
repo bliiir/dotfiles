@@ -7,7 +7,7 @@ set shiftwidth=4
 set shiftround
 set expandtab
 set syntax=python
-set textwidth=99
+" set textwidth=99
 setf python
 filetype indent plugin on
 

@@ -54,6 +54,6 @@ alias front="~/Documents/inBioPlatformFront"
 alias cypress="~/Documents/inBioPlatformFront/source"
 
 # Build docker containers
-alias dpl_api="~/Documents/ppi_api/ | ./deploy -f rgr-bubo-api"
-alias dpl_front="~/Documents/ppi_api/ | ./deploy -f rgr-bubo-api"
-alias dpl_platform="~/Documents/ppi_api/ | ./deploy -f rgr-bubo-api"
+alias dpl_api="cd $HOME/Documents/ppi_api ; ./deploy -f rgr-bubo-api"
+alias dpl_front="cd $HOME/Documents/inBioPlatformFront ; ./deploy -f rgr-bubo-front"
+alias dpl_platform="cd $HOME/Documents/inBioPlatformAPI ; ./deploy -f rgr-bubo-platform"
