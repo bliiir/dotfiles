@@ -15,43 +15,45 @@ alias cpp="pwd | pbcopy"
 # ------------------------------------------------------------------------------ 
 
 # General
-alias drop="~/Dropbox"
-alias docs="~/Documents"
+alias drop="cd $HOME/Dropbox"
+alias docs="cd $HOME/Documents"
 
 # Code
-alias code="~/Dropbox/_code"
-alias ccat="~/Dropbox/_code/python/trading/ccat/ccat"
-alias explore="~/Dropbox/_code/python/trading/ccat/ccat/explore/"
-alias ml="~/Dropbox/_code/python/ml"
+alias code="cd $HOME/Dropbox/_code"
+alias ccat="cd $HOME/Dropbox/_code/python/trading/ccat/ccat"
+alias explore="cd $HOME/Dropbox/_code/python/trading/ccat/ccat/explore/"
+alias ml="cd $HOME/Dropbox/_code/python/ml"
 
 # Work
-alias work="~/Dropbox/_work"
+alias work="cd $HOME/Dropbox/_work"
 
 # privat
-alias priv="~/Dropbox/_privat"
-alias jrnl="~/Dropbox/_privat/journal/bliiir/private"
-alias journal="~/Dropbox/_privat/journal/bliiir/private"
-alias cheatsheets="~/Dropbox/_privat/journal/bliiir/coding/cheatsheets/"
-alias walkthroughs="~/Dropbox/_privat/journal/bliiir/coding/walkthroughs/"
-alias notes="~/Dropbox/_privat/journal/bliiir/coding/notes/"
+alias priv="cd $HOME/Dropbox/_privat"
+alias jrnl="cd $HOME/Dropbox/_privat/journal/bliiir/private"
+alias journal="cd $HOME/Dropbox/_privat/journal/bliiir/private"
+alias cheatsheets="cd $HOME/Dropbox/_privat/journal/bliiir/coding/cheatsheets/"
+alias walkthroughs="cd $HOME/Dropbox/_privat/journal/bliiir/coding/walkthroughs/"
+alias notes="cd $HOME/Dropbox/_privat/journal/bliiir/coding/notes/"
 
 # Environment
-alias al="~/.alias"
-alias cf="~/.config/"
-alias rc="~/.config/nvim/rc/"
-alias plugged="~/.config/nvim/plugged/"
-alias swap="~/.local/share/nvim/swap"
+alias al="cd $HOME/.alias"
+alias cf="cd $HOME/.config/"
+alias rc="cd $HOME/.config/nvim/rc/"
+alias plugged="cd $HOME/.config/nvim/plugged/"
+alias swap="cd $HOME/.local/share/nvim/swap"
 
 # Intomics
-alias intomics="~/Dropbox/_work/intomics/md"
-alias api="~/Documents/ppi_api/ppi_api/app"
-alias cli="~/Documents/ppi_cli"
-alias lib="~/Documents/ppi_lib"
-alias deploy="~/Documents/inBioDeploy"
-alias distconf="~/Documents/inBioDeploy/distconf"
-alias platform="~/Documents/inBioPlatformAPI/web_api/app"
-alias front="~/Documents/inBioPlatformFront"
-alias cypress="~/Documents/inBioPlatformFront/source"
+alias intomics="cd $HOME/Dropbox/_work/intomics/md"
+alias api="cd $HOME/Documents/ppi_api/ppi_api/app"
+alias cli="cd $HOME/Documents/ppi_cli"
+alias lib="cd $HOME/Documents/ppi_lib"
+alias deploy="cd $HOME/Documents/inBioDeploy"
+alias distconf="cd $HOME/Documents/inBioDeploy/distconf"
+alias platform="cd $HOME/Documents/inBioPlatformAPI/web_api/app"
+alias front="cd $HOME/Documents/inBioPlatformFront"
+alias cypress="cd $HOME/Documents/inBioPlatformFront/source"   
+alias cheatsheet="vim $HOME/Dropbox/_work/intomics/md/intomics_cheatsheet.md"   
+alias endpoints="vim $HOME/Dropbox/_work/intomics/md/custom_association_endpoint_spec.md"   
 
 # Build docker containers
 alias dpl_api="cd $HOME/Documents/ppi_api ; ./deploy -f rgr-bubo-api"
