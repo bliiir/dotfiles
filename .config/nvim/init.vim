@@ -56,8 +56,10 @@ set statusline+=%F  " Show the path and filename at the bottom of the buffer
 
 " Colors
 set colorcolumn=72,79,100
-"set tw=100  " width of document (used by gd), default was 79
 " highlight ColorColumn ctermbg=233
+set cursorcolumn  " Shows a colorcolumn at the same indentation as the cursor
+" set cursorline
+set virtualedit=all
 
 "------------------------------------------------------------------------------- 
 " define variables (let clause)
@@ -148,6 +150,9 @@ set ic
 
 " Source user defined functions
 hi Normal ctermfg=252 ctermbg=none cterm=none guifg=#e3e0d7 guibg=NONE gui=none
+
+syn keyword commentKeywords NOTE BUG TODO
+syntax enable
 
 set norelativenumber
 set number

@@ -72,6 +72,7 @@ call plug#begin()
 
 	" Tabularize:
 	Plug 'godlygeek/tabular'
+	" Plug 'nathanaelkane/vim-indent-guides'
  
 call plug#end()
 
@@ -207,6 +208,14 @@ let g:mkdp_preview_options = {
 
 
 " ------------------------------------------------------------------------------
-" vim-doctring 
+" vim-docstring 
 " " ------------------------------------------------------------------------------
 " autocmd FileType python PyDocHide
+
+" -----------------------------------------------------------------------------
+" vim-indent-guides 
+" -----------------------------------------------------------------------------
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
