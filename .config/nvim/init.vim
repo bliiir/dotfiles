@@ -59,7 +59,7 @@ set colorcolumn=72,79,100
 " highlight ColorColumn ctermbg=233
 set cursorcolumn  " Shows a colorcolumn at the same indentation as the cursor
 " set cursorline
-set virtualedit=all
+" set virtualedit=all
 
 "------------------------------------------------------------------------------- 
 " define variables (let clause)
@@ -93,8 +93,8 @@ set nowrap  " Do not wrap lines
 "set nolist  " list disables linebreak
 set linebreak
 set nolist  " list disables linebreak
-set textwidth=79
-set wrapmargin=0
+" set textwidth=79
+" set wrapmargin=0
 
 "------------------------------------------------------------------------------- 
 
@@ -151,10 +151,13 @@ set ic
 " Source user defined functions
 hi Normal ctermfg=252 ctermbg=none cterm=none guifg=#e3e0d7 guibg=NONE gui=none
 
-syn keyword commentKeywords NOTE BUG TODO
-syntax enable
+" syn keyword commentKeywords NOTE BUG TODO
+" syntax enable
 
 set norelativenumber
 set number
-" highlight String cterm=italic gui=italic                                    
+" highlight String cterm=italic gui=italic
+
+" Stop vim from hiding any characters
+set conceallevel=0
 

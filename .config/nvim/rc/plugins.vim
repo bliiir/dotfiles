@@ -72,7 +72,7 @@ call plug#begin()
 
 	" Tabularize:
 	Plug 'godlygeek/tabular'
-	" Plug 'nathanaelkane/vim-indent-guides'
+	Plug 'nathanaelkane/vim-indent-guides'
  
 call plug#end()
 
@@ -101,6 +101,18 @@ let g:NERDAltDelims_cpp = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
+
+" ------------------------------------------------------------------------------
+" NERDTree
+" ------------------------------------------------------------------------------
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists(“s:std_in”) | NERDTree | endif
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 
 " ------------------------------------------------------------------------------
@@ -209,8 +221,8 @@ let g:mkdp_preview_options = {
 
 " ------------------------------------------------------------------------------
 " vim-docstring 
-" " ------------------------------------------------------------------------------
-" autocmd FileType python PyDocHide
+" ------------------------------------------------------------------------------
+autocmd FileType python PyDocHide
 
 " -----------------------------------------------------------------------------
 " vim-indent-guides 
@@ -219,3 +231,4 @@ let g:mkdp_preview_options = {
 " let g:indent_guides_auto_colors = 0
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
