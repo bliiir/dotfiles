@@ -6,7 +6,7 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
-set textwidth=70
+set textwidth=79
 set nowrap
 set syntax=python
 
