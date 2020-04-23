@@ -20,32 +20,21 @@ call plug#begin()
 	"     set termguicolors
 	" endif
  
+	" Defaults:
 	" Vim defaults everyone can agree on
 	Plug 'tpope/vim-sensible'
-
-	" Commenting:
-	" Vim plugin for intensely nerdy commenting powers
-	Plug 'scrooloose/nerdcommenter'
-	" Quoting/parenthesizing made simple
-	Plug 'tpope/vim-surround'
+	" Heuristically set buffer options 
+	Plug 'tpope/vim-sleuth'
 
 
-	" File Explorer:
-	" A tree explorer plugin for vim
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
- 
 	" Syntax:
 	" Syntax checking hacks for vim
 	Plug 'vim-syntastic/syntastic'
 
 
-	" Tab Completion:
-	" Using the jedi autocompletion library for VIM
-	Plug 'davidhalter/jedi-vim'
-	" A code-completion engine for Vim
-	Plug 'Valloric/YouCompleteMe'
-	" Perform all your vim insert mode completions with Tab  
-	" Plug 'ervandew/supertab'
+	" File Explorer:
+	" A tree explorer plugin for vim
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 
 	" Language Server:
@@ -59,6 +48,27 @@ call plug#begin()
 	" Intellisense engine for Vim8 & Neovim, full language server protocol 
 	" support as VSCode
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+	" Tab Completion:
+	" Using the jedi autocompletion library for VIM
+	Plug 'davidhalter/jedi-vim'
+	" A code-completion engine for Vim
+	Plug 'Valloric/YouCompleteMe'
+	" Perform all your vim insert mode completions with Tab  
+	" Plug 'ervandew/supertab'
+
+
+	" Indentation:
+	" A Vim plugin for visually displaying indent levels in code 
+	" Plug 'nathanaelkane/vim-indent-guides'
+
+
+	" Commenting:
+	" Vim plugin for intensely nerdy commenting powers
+	Plug 'scrooloose/nerdcommenter'
+	" Quoting/parenthesizing made simple
+	Plug 'tpope/vim-surround'
 	
 	
 	" Snippets:
@@ -96,20 +106,28 @@ call plug#begin()
 	" Python:
 	" Semantic Highlighting for Python in Neovim
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+	" Flake8 plugin for Vim
 	Plug 'nvie/vim-flake8'
+	" Sort and highlight Python imports in Vim 
 	Plug 'tweekmonster/impsort.vim'
+	" No-BS Python code folding for Vim
 	Plug 'tmhedberg/SimpylFold'
+	" Fold your Python docstrings
 	Plug 'yhat/vim-docstring'
  
+
 	" Jupyter:
+	" Make Vim talk to Jupyter kernels
 	Plug 'jupyter-vim/jupyter-vim'
 
+
 	" Latex:
+	" A modern vim plugin for editing LaTeX files. 
 	Plug 'lervag/vimtex'
  
 	" Tabularize:
+	" Vim script for text filtering and alignment
 	Plug 'godlygeek/tabular'
-	Plug 'nathanaelkane/vim-indent-guides'
  
 call plug#end()
 
