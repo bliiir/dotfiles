@@ -52,6 +52,7 @@ alias distconf="cd $HOME/Documents/inBioDeploy/distconf"
 alias platform="cd $HOME/Documents/inBioPlatformAPI/web_api/app"
 alias front="cd $HOME/Documents/inBioPlatformFront"
 alias cypress="cd $HOME/Documents/inBioPlatformFront/source"   
+alias tests="cd $HOME/Documents/inBioPlatformFront/source/cypress/integration/api"
 alias cheatsheet="vim $HOME/Dropbox/_work/intomics/md/intomics_cheatsheet.md"   
 alias endpoints="vim $HOME/Dropbox/_work/intomics/md/custom_association_endpoint_spec.md"   
 
@@ -59,3 +60,9 @@ alias endpoints="vim $HOME/Dropbox/_work/intomics/md/custom_association_endpoint
 alias dpl_api="cd $HOME/Documents/ppi_api ; ./deploy -f rgr-bubo-api"
 alias dpl_front="cd $HOME/Documents/inBioPlatformFront ; ./deploy -f rgr-bubo-front"
 alias dpl_platform="cd $HOME/Documents/inBioPlatformAPI ; ./deploy -f rgr-bubo-platform"
+
+alias dpl_front_shared="cd $HOME/Documents/inBioPlatformFront ; ./deploy -f bubo-front-8560-test"
+
+
+alias githow="vim $HOME/Dropbox/_privat/journal/bliiir/coding/cheatsheets/20181004_git.md"
+

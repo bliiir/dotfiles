@@ -63,6 +63,9 @@ call plug#begin()
 	Plug 'tweekmonster/impsort.vim'
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'yhat/vim-docstring'
+
+	" Javascript:
+	Plug 'beautify-web/js-beautify'
  
 	" Latex:
 	Plug 'lervag/vimtex'
@@ -72,7 +75,7 @@ call plug#begin()
 
 	" Tabularize:
 	Plug 'godlygeek/tabular'
-	Plug 'nathanaelkane/vim-indent-guides'
+	" Plug 'nathanaelkane/vim-indent-guides'
  
 call plug#end()
 
