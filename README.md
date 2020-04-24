@@ -14,6 +14,9 @@ Also check out [Sourabh Bajaj](https://sourabhbajaj.com/) excellent [developer M
 ### Yadm
 `brew install yadm`
 
+### Nodejs
+`curl -sL install-node.now.sh/lts | bash`
+
 ### dotfiles
 Clone dotfiles 
 `yadm clone https://github.com/bliiir/dotfiles.git`

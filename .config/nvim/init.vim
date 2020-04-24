@@ -14,6 +14,9 @@ source $HOME/.config/nvim/rc/functions.vim
 " ALL hotkeys
 source $HOME/.config/nvim/rc/map.vim
 
+" Macros
+source $HOME/.config/nvim/rc/macros.vim
+
 " file type specific vim config
 autocmd BufNewFile,BufRead *.js  source $HOME/.config/nvim/rc/java_script.vim
 " autocmd BufNewFile,BufRead *.cs source $HOME/.config/nvim/rc/cs.vim
