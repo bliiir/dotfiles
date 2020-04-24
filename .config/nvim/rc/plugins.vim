@@ -52,9 +52,9 @@ call plug#begin()
 
 	" Tab Completion:
 	" Using the jedi autocompletion library for VIM
-	Plug 'davidhalter/jedi-vim'
+	" Plug 'davidhalter/jedi-vim'
 	" A code-completion engine for Vim
-	Plug 'Valloric/YouCompleteMe'
+	" Plug 'Valloric/YouCompleteMe'
 	" Perform all your vim insert mode completions with Tab  
 	" Plug 'ervandew/supertab'
 
