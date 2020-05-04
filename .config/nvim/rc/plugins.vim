@@ -118,6 +118,9 @@ call plug#begin()
 	Plug 'tmhedberg/SimpylFold'
 	" Fold your Python docstrings
 	Plug 'yhat/vim-docstring'
+
+	" Javascript:
+	Plug 'beautify-web/js-beautify'
  
 
 	" Jupyter:
@@ -132,6 +135,7 @@ call plug#begin()
 	" Tabularize:
 	" Vim script for text filtering and alignment
 	Plug 'godlygeek/tabular'
+	" Plug 'nathanaelkane/vim-indent-guides'
  
 call plug#end()
 
