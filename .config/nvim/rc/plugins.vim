@@ -16,13 +16,14 @@ call plug#begin()
     
 	" On-demand loading
 	" if !has('nvim')
+	"         Plug 'tpope/vim-sensible'
 	" else
-	"     set termguicolors
+	"         set termguicolors
 	" endif
  
 	" Defaults:
 	" Vim defaults everyone can agree on
-	Plug 'tpope/vim-sensible'
+	" Plug 'tpope/vim-sensible'
 	" Heuristically set buffer options 
 	Plug 'tpope/vim-sleuth'
 
@@ -62,6 +63,9 @@ call plug#begin()
 	" Indentation:
 	" A Vim plugin for visually displaying indent levels in code 
 	" Plug 'nathanaelkane/vim-indent-guides'
+	" A vim plugin to display the indention levels with thin vertical lines
+	" https://github.com/Yggdroot/indentLine
+	Plug 'Yggdroot/indentLine'
 
 
 	" Commenting:
@@ -143,8 +147,8 @@ call plug#end()
 " Style
 " ------------------------------------------------------------------------------
 
-set background=dark
-set termguicolors
+" set background=dark
+" set termguicolors
 
 " material monokai
 colorscheme material-monokai
@@ -294,3 +298,14 @@ autocmd FileType python PyDocHide
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
+
+" -----------------------------------------------------------------------------
+" vim-indentline
+" -----------------------------------------------------------------------------
+" let g:indentLine_setColors = 0
+" let g:indentLine_color_term = 239
+" let g:indentLine_bgcolor_term = 202
+" let g:indentLine_bgcolor_gui = '#FF5F00'
+" let g:indentLine_char = 'c'
+let g:indentLine_char = '⎸' " ¦, ┆, │, ⎸ ▏
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
