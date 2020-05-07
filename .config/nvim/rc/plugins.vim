@@ -97,6 +97,9 @@ call plug#begin()
 	" A dark Material Design version of Monokai for Vim 
 	Plug 'skielbasa/vim-material-monokai'
 
+	" An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting! 
+	Plug 'TaDaa/vimade'  " https://github.com/TaDaa/vimade
+
 
 	" Markdown:
 	Plug 'plasticboy/vim-markdown'
