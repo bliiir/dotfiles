@@ -86,7 +86,7 @@ pyenv activate inbio
 # source sub configs
 [ -f $HOME/.local/qfc/bin/qfc.sh ] && source $HOME/.local/qfc/bin/qfc.sh
 source $HOME/.config/zsh/aliases.zsh
-source $HOME/.config/zsh/vim.zsh
+# source $HOME/.config/zsh/vim.zsh
 # if [OS == 'Darwin' && -f $HOME/.config/zsh/darwin.zsh]; then
 	# source $HOME/.config/zsh/darwin.zsh
 # fi;
@@ -135,7 +135,8 @@ fi
 # force spark to use python3!
 export PYSPARK_PYTHON=python3
 
-bindkey -v
+# Vim bindkey
+# bindkey -v
 export KEYTIMEOUT=1 # Kill the timelag
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
