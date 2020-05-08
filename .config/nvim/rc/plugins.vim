@@ -65,7 +65,7 @@ call plug#begin()
 	" Plug 'nathanaelkane/vim-indent-guides'
 	" A vim plugin to display the indention levels with thin vertical lines
 	" https://github.com/Yggdroot/indentLine
-	Plug 'Yggdroot/indentLine'
+	" Plug 'Yggdroot/indentLine'
 
 
 	" Commenting:
@@ -97,7 +97,7 @@ call plug#begin()
 	" A collection of themes for vim-airline 
 	Plug 'vim-airline/vim-airline-themes'
 	" The colorscheme with neovim in mind
-	Plug 'freeo/vim-kalisi'
+	" Plug 'freeo/vim-kalisi'
 	" A dark Material Design version of Monokai for Vim 
 	Plug 'skielbasa/vim-material-monokai'
 
@@ -145,7 +145,7 @@ call plug#end()
 " ------------------------------------------------------------------------------
 
 " set background=dark
-" set termguicolors
+set termguicolors
 
 " material monokai
 colorscheme material-monokai
@@ -287,22 +287,9 @@ let g:mkdp_preview_options = {
 " ------------------------------------------------------------------------------
 autocmd FileType python PyDocHide
 
-" -----------------------------------------------------------------------------
-" vim-indent-guides 
-" -----------------------------------------------------------------------------
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_auto_colors = 0
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-
 
 " -----------------------------------------------------------------------------
-" vim-indentline
+" vim-markdown
 " -----------------------------------------------------------------------------
-" let g:indentLine_setColors = 0
-" let g:indentLine_color_term = 239
-" let g:indentLine_bgcolor_term = 202
-" let g:indentLine_bgcolor_gui = '#FF5F00'
-" let g:indentLine_char = 'c'
-let g:indentLine_char = '⎸' " ¦, ┆, │, ⎸ ▏
-" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
