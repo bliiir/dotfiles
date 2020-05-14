@@ -14,132 +14,102 @@
 " ------------------------------------------------------------------------------
 call plug#begin()
     
-	" On-demand loading
-	" if !has('nvim')
-	"         Plug 'tpope/vim-sensible'
-	" else
-	"         set termguicolors
-	" endif
- 
-	" Defaults:
-	" Vim defaults everyone can agree on
-	" Plug 'tpope/vim-sensible'
-	" Heuristically set buffer options 
-	Plug 'tpope/vim-sleuth'
+    " On-demand loading
+    " if !has('nvim')
+    "         Plug 'tpope/vim-sensible'
+    " else
+    "         set termguicolors
+    " endif
+
+    " Defaults:
+    " Plug 'tpope/vim-sensible'  " Vim defaults everyone can agree on
+    " Plug 'tpope/vim-sleuth'  " Heuristically set buffer options 
 
 
-	" Syntax:
-	" Syntax checking hacks for vim
-	Plug 'vim-syntastic/syntastic'
+    " Syntax:
+    Plug 'vim-syntastic/syntastic'  " Syntax checking hacks for vim
 
 
-	" File Explorer:
-	" A tree explorer plugin for vim
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    " File Explorer:
+    Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }  " A tree explorer plugin for vim https://github.com/preservim/nerdtree
 
 
-	" Language Server:
-	" normalize async job control api for vim and neovim 
-	Plug 'prabirshrestha/async.vim'
-	" async language server protocol plugin for vim and neovim 
-	Plug 'prabirshrestha/vim-lsp'
+    " Fuzzy Finder:
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " A command-line fuzzy finder https://github.com/junegunn/fzf
+    Plug 'junegunn/fzf.vim'
 
 
-	" Intellisense:
-	" Intellisense engine for Vim8 & Neovim, full language server protocol 
-	" support as VSCode
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Language Server:
+    " Plug 'prabirshrestha/async.vim'  " normalize async job control api for vim and neovim 
+    " Plug 'prabirshrestha/vim-lsp'  " async language server protocol plugin for vim and neovim 
 
 
-	" Tab Completion:
-	" Using the jedi autocompletion library for VIM
-	" Plug 'davidhalter/jedi-vim'
-	" A code-completion engine for Vim
+    " Autocomplete:
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Intellisense engine for Vim8 & Neovim
+    " Using the jedi autocompletion library for VIM
+    " Plug 'davidhalter/jedi-vim'
+    " A code-completion engine for Vim
 	" Plug 'Valloric/YouCompleteMe'
-	" Perform all your vim insert mode completions with Tab  
-	" Plug 'ervandew/supertab'
+    " Perform all your vim insert mode completions with Tab  
+    " Plug 'ervandew/supertab'
 
 
-	" Indentation:
-	" A Vim plugin for visually displaying indent levels in code 
-	" Plug 'nathanaelkane/vim-indent-guides'
-	" A vim plugin to display the indention levels with thin vertical lines
-	" https://github.com/Yggdroot/indentLine
-	" Plug 'Yggdroot/indentLine'
+    " Indentation:
+    Plug 'godlygeek/tabular'  " Vim script for text filtering and alignment
+    " Plug 'nathanaelkane/vim-indent-guides'  " A Vim plugin for visually displaying indent levels in code 
+    " Plug 'Yggdroot/indentLine'  " A vim plugin to display the indention levels with thin vertical lines https://github.com/Yggdroot/indentLine
 
 
-	" Commenting:
-	" Vim plugin for intensely nerdy commenting powers
-	Plug 'scrooloose/nerdcommenter'
-	" Quoting/parenthesizing made simple
-	Plug 'tpope/vim-surround'
+    " Commenting:
+    Plug 'preservim/nerdcommenter'  " Vim plugin for intensely nerdy commenting powers https://github.com/preservim/nerdcommenter
+    Plug 'tpope/vim-surround'  " Quoting/parenthesizing made simple
+
+
+
+    " Snippets:
+    Plug 'sirver/ultisnips'	 " UltiSnips - The ultimate snippet solution for Vim
+    Plug 'honza/vim-snippets'  " vim-snipmate default snippets
+    Plug 'thomasfaingnaert/vim-lsp-snippets'  " Language Server Protocol snippets in vim using vim-lsp
+    Plug 'thomasfaingnaert/vim-lsp-ultisnips'  " Language Server Protocol snippets in vim using vim-lsp and UltiSnips
+
+
+    " Git:
+    Plug 'tpope/vim-fugitive'  " Fugitive is the premier Vim plugin for Git
+
+
+    " Themes:
+    Plug 'vim-airline/vim-airline'  " status/tabline for vim
+    Plug 'vim-airline/vim-airline-themes'  " A collection of themes for vim-airline 
+    Plug 'morhetz/gruvbox'  " Retro groove color scheme for Vim  https://github.com/morhetz/gruvbox
+    " Plug 'skielbasa/vim-material-monokai'  " A dark Material Design version of Monokai for Vim 
+
+
+    " Markdown:
+    Plug 'plasticboy/vim-markdown'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+
+    " Python:
+    Plug 'nvie/vim-flake8'  " Flake8 plugin for Vim
+    Plug 'tweekmonster/impsort.vim'  " Sort and highlight Python imports in Vim 
+    Plug 'tmhedberg/SimpylFold' " No-BS Python code folding for Vim
+    Plug 'yhat/vim-docstring'  " Fold your Python docstrings
+    " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Semantic Highlighting for Python in Neovim
+
+
+    " Javascript:
+    Plug 'beautify-web/js-beautify'
+    Plug 'pangloss/vim-javascript'  " Vastly improved Javascript indentation and syntax support in Vim https://github.com/pangloss/vim-javascript
+
+
+    " Jupyter:
+    " Plug 'jupyter-vim/jupyter-vim'  " Make Vim talk to Jupyter kernels
+
+
+    " Latex:
+    " Plug 'lervag/vimtex'  " A modern vim plugin for editing LaTeX files. 
 	
-	
-	" Snippets:
-	" UltiSnips - The ultimate snippet solution for Vim
-	Plug 'sirver/ultisnips'
-	" vim-snipmate default snippets
-	Plug 'honza/vim-snippets'
-	" Language Server Protocol snippets in vim using vim-lsp
-	Plug 'thomasfaingnaert/vim-lsp-snippets'
-	" Language Server Protocol snippets in vim using vim-lsp and UltiSnips
-	Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
-
-	" Git:
-	" Fugitive is the premier Vim plugin for Git
-	Plug 'tpope/vim-fugitive'
- 
-
-	" Themes:
-	" status/tabline for vim
-	Plug 'vim-airline/vim-airline'
-	" A collection of themes for vim-airline 
-	Plug 'vim-airline/vim-airline-themes'
-	" The colorscheme with neovim in mind
-	" Plug 'freeo/vim-kalisi'
-	" A dark Material Design version of Monokai for Vim 
-	Plug 'skielbasa/vim-material-monokai'
-
-	" An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting! 
-	Plug 'TaDaa/vimade'  " https://github.com/TaDaa/vimade
-
-
-	" Markdown:
-	Plug 'plasticboy/vim-markdown'
-	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
- 
-
-	" Python:
-	" Semantic Highlighting for Python in Neovim
-	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-	" Flake8 plugin for Vim
-	Plug 'nvie/vim-flake8'
-	" Sort and highlight Python imports in Vim 
-	Plug 'tweekmonster/impsort.vim'
-	" No-BS Python code folding for Vim
-	Plug 'tmhedberg/SimpylFold'
-	" Fold your Python docstrings
-	Plug 'yhat/vim-docstring'
-
-	" Javascript:
-	Plug 'beautify-web/js-beautify'
- 
-
-	" Jupyter:
-	" Make Vim talk to Jupyter kernels
-	Plug 'jupyter-vim/jupyter-vim'
-
-
-	" Latex:
-	" A modern vim plugin for editing LaTeX files. 
-	Plug 'lervag/vimtex'
- 
-	" Tabularize:
-	" Vim script for text filtering and alignment
-	Plug 'godlygeek/tabular'
-	" Plug 'nathanaelkane/vim-indent-guides'
- 
 call plug#end()
 
 
@@ -150,13 +120,15 @@ call plug#end()
 " set background=dark
 set termguicolors
 
+colorscheme gruvbox
+
 " material monokai
-colorscheme material-monokai
-let g:materialmonokai_italic=1
-let g:materialmonokai_subtle_spell=1
-let g:materialmonokai_custom_lint_indicators=1
-let g:airline_theme='materialmonokai'
-let g:materialmonokai_subtle_airline=1
+" colorscheme material-monokai
+" let g:materialmonokai_italic=1
+" let g:materialmonokai_subtle_spell=1
+" let g:materialmonokai_custom_lint_indicators=1
+" let g:airline_theme='materialmonokai'
+" let g:materialmonokai_subtle_airline=1
 
 
 " ------------------------------------------------------------------------------

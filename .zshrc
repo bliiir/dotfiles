@@ -1,3 +1,5 @@
+# Source environment settings
+source ~/.config/.profile 
 
 #------------------------------------------------------------------------------- 
  
@@ -23,8 +25,8 @@ source ~/.local/bin/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-# antigen bundle vi-mode
-# antigen bundle thefuck
+antigen bundle vi-mode
+antigen bundle thefuck
 antigen bundle pip
 antigen bundle command-not-found
 antigen bundle autojump
@@ -160,7 +162,3 @@ eval
 		test -n "$TF_CMD" && print -s $TF_CMD
 	}
 
-# Source environment settings
-source ~/.profile 
-source ~/.alias 
-source ~/.secret
