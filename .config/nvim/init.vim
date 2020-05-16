@@ -63,7 +63,7 @@ set statusline+=%F  " Show the path and filename at the bottom of the buffer
 
 " hi Normal ctermfg=252 ctermbg=none cterm=none guifg=#e3e0d7 guibg=NONE gui=none
 " Colors
-set colorcolumn=79,100
+set colorcolumn=80
 " highlight ColorColumn ctermbg=233
 set cursorcolumn  " Shows a colorcolumn at the same indentation as the cursor
 " set cursorline
