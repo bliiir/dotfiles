@@ -27,11 +27,11 @@ call plug#begin()
 
 
     " Syntax:
-    Plug 'vim-syntastic/syntastic'  " Syntax checking hacks for vim
+    " Plug 'vim-syntastic/syntastic'  " Syntax checking hacks for vim
 
 
     " File Explorer:
-    Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }  " A tree explorer plugin for vim https://github.com/preservim/nerdtree
+    " Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }  " A tree explorer plugin for vim https://github.com/preservim/nerdtree
 
 
     " Fuzzy Finder:
@@ -90,16 +90,16 @@ call plug#begin()
 
 
     " Python:
-    Plug 'nvie/vim-flake8'  " Flake8 plugin for Vim
+    " Plug 'nvie/vim-flake8'  " Flake8 plugin for Vim
     Plug 'tweekmonster/impsort.vim'  " Sort and highlight Python imports in Vim 
-    Plug 'tmhedberg/SimpylFold' " No-BS Python code folding for Vim
-    Plug 'yhat/vim-docstring'  " Fold your Python docstrings
+    " Plug 'tmhedberg/SimpylFold' " No-BS Python code folding for Vim
+    " Plug 'yhat/vim-docstring'  " Fold your Python docstrings
     " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Semantic Highlighting for Python in Neovim
 
 
     " Javascript:
-    Plug 'beautify-web/js-beautify'
-    Plug 'pangloss/vim-javascript'  " Vastly improved Javascript indentation and syntax support in Vim https://github.com/pangloss/vim-javascript
+    " Plug 'beautify-web/js-beautify'
+    " Plug 'pangloss/vim-javascript'  " Vastly improved Javascript indentation and syntax support in Vim https://github.com/pangloss/vim-javascript
 
 
     " Jupyter:
